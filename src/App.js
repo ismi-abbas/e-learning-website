@@ -1,9 +1,11 @@
 import "./index.css";
+import Header from "./components/Header/Header";
 
+//Parent component
 function App() {
 	return (
 		<div>
-			<header className="App-header">E-Learning Website</header>
+			<Header />
 		</div>
 	);
 }
