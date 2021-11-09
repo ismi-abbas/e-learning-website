@@ -28,7 +28,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size="lg" controlId="password">
+        <Form.Group size="sm" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
@@ -36,12 +36,11 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()}>
+        <Button block size="md" type="submit">
           Login
         </Button>
       </Form>
     </div>
   );
 };
-
 export default Login;
