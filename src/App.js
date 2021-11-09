@@ -1,35 +1,26 @@
 import React from "react";
 import "./index.css";
 import Header from "./components/Header";
-import { LinkContainer } from "react-router-bootstrap";
 import Navbar from "react-bootstrap/Navbar"; //Navigation from bootstrap
 import Nav from "react-bootstrap/Nav"; //Navigation from bootstrap
-import Routes from "./Routes";
-import Footer from "./component/Footer";
+import Footer from "./components/Footer";
 
 //Parent component
 function App() {
   return (
     <div className="App container py-3">
       <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
-        <LinkContainer to="/">
-          <Navbar.Brand className="font-weight-bold text-muted">
-            E Learning Website
-          </Navbar.Brand>
-        </LinkContainer>
+        <Navbar.Brand className="font-weight-bold text-muted">
+          E Learning Website
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav activeKey={window.location.pathname}>
-            <LinkContainer to="/signup">
-              <Nav.Link>Subscribe</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/login">
-              <Nav.Link>Login</Nav.Link>
-            </LinkContainer>
+            <Nav.Link>Subscribe</Nav.Link>
+            <Nav.Link>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Routes />
       <div>
         <Footer />
       </div>

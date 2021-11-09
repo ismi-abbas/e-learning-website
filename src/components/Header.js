@@ -1,8 +1,6 @@
 import "../index.css";
-import Login from "../containers/Login"; //Login containers - abbas
 import Nav from "react-bootstrap/Nav"; //Navigation from bootstrap
 import Navbar from "react-bootstrap/Nav"; //Navigation from bootstrap
-import Routes from "../Routes";
 import React from "react";
 
 const Header = () => {
@@ -15,12 +13,11 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Link href="/signup">Signup</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link>Signup</Nav.Link>
+            <Nav.Link>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Routes />
     </div>
   );
 };
