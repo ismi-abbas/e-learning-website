@@ -5,6 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import Navbar from "react-bootstrap/Navbar"; //Navigation from bootstrap
 import Nav from "react-bootstrap/Nav"; //Navigation from bootstrap
 import Routes from "./Routes";
+import Footer from "./component/Footer";
 
 //Parent component
 function App() {
@@ -29,6 +30,9 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Routes />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
