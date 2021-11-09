@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import { LinkContainer } from "react-router-bootstrap";
 import Navbar from "react-bootstrap/Navbar"; //Navigation from bootstrap
 import Nav from "react-bootstrap/Nav"; //Navigation from bootstrap
-import Routes from "./Routes";
 
 //Parent component
 function App() {
@@ -27,7 +26,6 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Routes />
     </div>
   );
 }
