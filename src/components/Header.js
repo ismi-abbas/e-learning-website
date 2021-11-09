@@ -1,6 +1,8 @@
 import "../index.css";
 import Nav from "react-bootstrap/Nav"; //Navigation from bootstrap
 import Navbar from "react-bootstrap/Nav"; //Navigation from bootstrap
+import React from "react";
+
 
 const Header = () => {
   return (
@@ -12,9 +14,11 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav>
+
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#features">Courses</Nav.Link>
           <Nav.Link href="#pricing">Subscribe Plan</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>
