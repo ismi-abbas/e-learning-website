@@ -1,6 +1,5 @@
 const connectDB = require('./config/db');
 const express = require('express');
-
 // Init Express
 const app = express();
 // Run connect database function
@@ -8,9 +7,8 @@ connectDB();
 // Init middleware
 app.use(express.json({ extended: false }));
 
+// GET request if API is running
 app.get('/', (req, res) => res.send('API is running successfully'));
-
-app.get('/upload', (req, res) => res.send('API is running successfully'));
 
 //Define the routes
 app.use('/api/users', require('./routes/api/users'));

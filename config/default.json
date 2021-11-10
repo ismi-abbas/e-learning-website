@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://abbas123:abbas123@e-learning-website.cojpo.mongodb.net/eLearningWebsiteDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://abbas123:abbas123@e-learning-website.cojpo.mongodb.net/eLearningWebsiteDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "jwtsecrettoken"
 }
