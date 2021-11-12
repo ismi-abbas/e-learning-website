@@ -2,8 +2,7 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
-import Navbar from 'react-bootstrap/Navbar'; //Navigation from bootstrap
-import Nav from 'react-bootstrap/Nav'; //Navigation from bootstrap
+import Home from './components/Home';
 import Footer from './components/Footer';
 
 //Parent component
@@ -11,6 +10,7 @@ function App() {
   return (
     <div className='App container py-3'>
       <Header />
+      <Home />
       <div>
         <Footer />
       </div>

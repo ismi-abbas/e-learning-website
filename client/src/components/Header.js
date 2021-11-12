@@ -7,30 +7,26 @@ import {
   Form,
   FormControl,
   Button,
-  Container,
 } from 'react-bootstrap'; //Navigation from bootstrap
 
 const Header = () => {
   return (
-    <div className='App container py-3'>
+    <div>
       <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
-        <Container>
-          <Navbar.Brand href='#home'>YLearn</Navbar.Brand>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='me-auto'>
-              <Nav.Link href='#home'>Home</Nav.Link>
-              <Nav.Link href='#courses'>Courses</Nav.Link>
-              <Nav.Link href='#subscribePlan'>Subsribe Plan</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href='#register'>Register</Nav.Link>
-              <Nav.Link eventKey={2} href='#login'>
-                Login
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
+        <Navbar.Brand href='#home'>YLearn</Navbar.Brand>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav className='me-auto'>
+            <Nav.Link href='#courses'>Courses</Nav.Link>
+            <Nav.Link href='#subscribePlan'>Subsribe Plan</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href='#register'>Register</Nav.Link>
+            <Nav.Link eventKey={2} href='#login'>
+              Login
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </div>
   );
