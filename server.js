@@ -25,17 +25,19 @@ app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/courses', require('./routes/api/courses'));
 app.use('/api/upload', require('./routes/api/upload')); // Upload route
 
-// Stream Grid-Fs
-// mongoose.connectDB('open', function () {
-//   gfs = Grid(conn.db, mongoose.mongo);
-//   gfs.collection('photos');
-// });
+// Stream Grid-Fs with mongoose
+const conn = mongoose.createConnection();
+conn.once('open', function () {
+  gfs = Grid(conn.db, mongoose.mongo);
+  gfs.collection('photos');
+});
 
 // Media routes
 app.get('/api/upload/:filename', async (req, res) => {
   try {
     const file = await gfs.files.findOne({ filename: req.params.filename });
-    const readStream = gfs.createReadStream(file.filename);
+
+    const readStream = gfs.createReadStream([id, file.filename]);
     readStream.pipe(res);
   } catch (error) {
     res.send('not found');
