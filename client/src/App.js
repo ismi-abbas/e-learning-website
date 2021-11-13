@@ -11,6 +11,7 @@ function App() {
     <div className='App container py-3'>
       <Header />
       <Home />
+      <br />
       <div>
         <Footer />
       </div>
