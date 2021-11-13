@@ -4,9 +4,6 @@ import '../index.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {
-  Navbar,
-  Nav,
-  NavDropdown,
   Form,
   FormControl,
   Button,
@@ -20,13 +17,6 @@ import {
 } from 'react-bootstrap'; //Navigation from bootstrap
 
 const Home = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <div>
       <div className='container bg-primary'>
@@ -61,46 +51,47 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div className='bg-white py-4 shadow-sm'>
-        <div className='container'>
-          <div className='row align-items-center'>
-            <div className='col-lg-4 col-md-6 col-sm-12 mb-2'>
-              <div className='d-flex align-items-center'>
-                <span className='icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg'>
-                  <i className='bi bi-camera-video'></i>
-                </span>
-                <div className='ms-3'>
-                  <h5 className='mb-0 fw-semi-bold '>30,000 online courses</h5>
-                  <div className='mb-0 text-secondary'>
-                    Enjoy a variety of fresh topics
-                  </div>
+      <div className='container'>
+        <div className='bg-white row align-items-center'>
+          <div className='bg-white col-lg-4 col-md-6 col-sm-12 mb-2'>
+            <div className='bg-white d-flex align-items-center'>
+              <span className='icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg'>
+                <i className='-bi bi-camera-video'></i>
+              </span>
+              <div className='ms-3'>
+                <h5 className='bg-white mb-0 fw-semi-bold '>
+                  30,000 online courses
+                </h5>
+                <div className='bg-white mb-0 text-secondary'>
+                  Enjoy a variety of fresh topics
                 </div>
               </div>
             </div>
-            <div className='col-lg-4 col-md-6 col-sm-12 mb-2'>
-              <div className='d-flex align-items-center'>
-                <span className='icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg '>
-                  <i className='bi bi-people-fill'></i>
-                </span>
-                <div className='ms-3'>
-                  <h5 className='mb-0 fw-semi-bold '>Expert Instruction</h5>
-                  <div className='mb-0 text-secondary'>
-                    Find The Right Instructor For You
-                  </div>
+          </div>
+          <div className='bg-white col-lg-4 col-md-6 col-sm-12 mb-2'>
+            <div className='bg-white d-flex align-items-center'>
+              <span className='icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg '>
+                <i className='bi bi-people-fill'></i>
+              </span>
+              <div className='ms-3'>
+                <h5 className='bg-white mb-0 fw-semi-bold '>
+                  Expert Instruction
+                </h5>
+                <div className='bg-white mb-0 text-secondary'>
+                  Find The Right Instructor For You
                 </div>
               </div>
             </div>
-            <div className='col-lg-4 col-md-6 col-sm-12 mb-2'>
-              <div className='d-flex align-items-center'>
-                <span className=' icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg'>
-                  <i className='bi bi-clock'></i>
-                </span>
-                <div className='ms-3'>
-                  <h5 className='mb-0 fw-semi-bold'>Lifetime Access</h5>
-                  <div className='mb-0 text-secondary'>
-                    Learn on your schedule
-                  </div>
+          </div>
+          <div className='bg-white col-lg-4 col-md-6 col-sm-12 mb-2'>
+            <div className='bg-white d-flex align-items-center'>
+              <span className=' icon-lg bg-white rounded-circle text-center text-dark-warning fs-3 p-2 shadow-lg'>
+                <i className='bi bi-clock'></i>
+              </span>
+              <div className='ms-3'>
+                <h5 className='bg-white mb-0 fw-semi-bold'>Lifetime Access</h5>
+                <div className='bg-white mb-0 text-secondary'>
+                  Learn on your schedule
                 </div>
               </div>
             </div>
@@ -111,7 +102,7 @@ const Home = () => {
       <div className='container'>
         <div className='row mb-4'>
           <div className='col mt-5 mb-3'>
-            <h3 className='mb-0 fw-semi-bold'>Recommended to you</h3>
+            <h3 className='mb-0 fw-semi-bold text-white'>Recommended to you</h3>
           </div>
         </div>
         <div className='row'>
@@ -156,27 +147,27 @@ const Home = () => {
                         <h6 className='card-title'>
                           The Python Course: build web application
                         </h6>
-                        <ul className='mb-2 list-inline mt-3'>
-                          <li className='list-inline-item'>
+                        <ul className='course-card mb-2 list-inline mt-3'>
+                          <li className='course-card list-inline-item'>
                             <span className='position-absolute search-icon'>
                               <i className='bi bi-clock fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary'>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary'>
                               2h:30m
                             </p>
                           </li>
-                          <li className='list-inline-item ps-4'>
+                          <li className='course-card list-inline-item ps-4'>
                             <span className='position-absolute search-icon '>
                               <i className='bi bi-reception-4 fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary '>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary '>
                               Advance
                             </p>
                           </li>
                         </ul>
 
-                        <div className='rating-section text-warning'>
-                          <span>
+                        <div className='course-card rating-section text-warning'>
+                          <span className='course-card'>
                             <i className='bi bi-star-fill '></i>
                             <i className='bi bi-star-fill'></i>
                             <i className='bi bi-star-fill'></i>
@@ -184,11 +175,13 @@ const Home = () => {
                             <i className='bi bi-star-fill'></i>
                             4.5
                           </span>
-                          <span className='text-secondary'>(13,245)</span>
+                          <span className='course-card text-secondary'>
+                            (13,245)
+                          </span>
                         </div>
                       </div>
-                      <div className='card-footer'>
-                        <div className='row align-items-center g-0'>
+                      <div className='card-footer bg-white'>
+                        <div className='course-card row align-items-center g-0'>
                           <div className='col-1'>
                             <Image
                               className='rounded-circle avatar-xs'
@@ -198,10 +191,12 @@ const Home = () => {
                               srcset=''
                             />
                           </div>
-                          <div className='col-auto ps-4 text-muted fw-semi-bold fs-6'>
-                            <span>Claire Robertson</span>
-                          </div>
-                          <div className='col-auto ms-auto'>
+                          <Row className='course-card col-auto ms-auto'>
+                            <span className='course-card'>
+                              Claire Robertson
+                            </span>
+                          </Row>
+                          <div className='course-card col-auto ms-auto'>
                             <a href='#'>
                               <i className='bi bi-bookmark'></i>
                             </a>
@@ -221,27 +216,27 @@ const Home = () => {
                         <h6 className='card-title'>
                           GraphQL: Introduction to graphQL for beginners
                         </h6>
-                        <ul className='mb-2 list-inline mt-3'>
-                          <li className='list-inline-item'>
+                        <ul className='course-card mb-2 list-inline mt-3'>
+                          <li className='course-card list-inline-item'>
                             <span className='position-absolute search-icon'>
                               <i className='bi bi-clock fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary'>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary'>
                               2h:46m
                             </p>
                           </li>
-                          <li className='list-inline-item ps-4'>
+                          <li className='course-card list-inline-item ps-4'>
                             <span className='position-absolute search-icon '>
                               <i className='bi bi-reception-4 fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary '>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary '>
                               Advance
                             </p>
                           </li>
                         </ul>
 
-                        <div className='rating-section text-warning'>
-                          <span>
+                        <div className='course-card rating-section text-warning'>
+                          <span className='course-card'>
                             <i className='bi bi-star-fill '></i>
                             <i className='bi bi-star-fill'></i>
                             <i className='bi bi-star-fill'></i>
@@ -249,11 +244,13 @@ const Home = () => {
                             <i className='bi bi-star-fill'></i>
                             4.5
                           </span>
-                          <span className='text-secondary'>(9,300)</span>
+                          <span className='course-card text-secondary'>
+                            (9,300)
+                          </span>
                         </div>
                       </div>
-                      <div className='card-footer'>
-                        <div className='row align-items-center g-0'>
+                      <div className='card-footer bg-white'>
+                        <div className='course-card row align-items-center g-0'>
                           <div className='col-1'>
                             <Image
                               className='rounded-circle avatar-xs'
@@ -263,10 +260,10 @@ const Home = () => {
                               srcset=''
                             />
                           </div>
-                          <div className='col-auto ps-4 text-muted fw-semi-bold fs-6'>
-                            <span>Ted Hawkins</span>
-                          </div>
-                          <div className='col-auto ms-auto'>
+                          <Row className='course-card col-auto ms-auto'>
+                            <span className='course-card'>Ted Hawkins</span>
+                          </Row>
+                          <div className='course-card col-auto ms-auto'>
                             <a href='#'>
                               <i className='bi bi-bookmark'></i>
                             </a>
@@ -287,27 +284,27 @@ const Home = () => {
                           Angular - the complete guide for beginner
                         </h6>
 
-                        <ul className='mb-2 list-inline mt-3'>
-                          <li className='list-inline-item'>
+                        <ul className='course-card mb-2 list-inline mt-3'>
+                          <li className='course-card list-inline-item'>
                             <span className='position-absolute search-icon'>
                               <i className='bi bi-clock fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary'>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary'>
                               1h:30m
                             </p>
                           </li>
-                          <li className='list-inline-item ps-4'>
+                          <li className='course-card list-inline-item ps-4'>
                             <span className='position-absolute search-icon '>
                               <i className='bi bi-reception-4 fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary '>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary '>
                               Beginner
                             </p>
                           </li>
                         </ul>
 
-                        <div className='rating-section text-warning'>
-                          <span>
+                        <div className='course-card rating-section text-warning'>
+                          <span className='course-card'>
                             <i className='bi bi-star-fill '></i>
                             <i className='bi bi-star-fill'></i>
                             <i className='bi bi-star-fill'></i>
@@ -315,11 +312,13 @@ const Home = () => {
                             <i className='bi bi-star-fill'></i>
                             4.5
                           </span>
-                          <span className='text-secondary'>(4,500)</span>
+                          <span className='course-card text-secondary'>
+                            (4,500)
+                          </span>
                         </div>
                       </div>
-                      <div className='card-footer'>
-                        <div className='row align-items-center g-0'>
+                      <div className='card-footer bg-white'>
+                        <div className='course-card row align-items-center g-0'>
                           <div className='col-1'>
                             <Image
                               className='rounded-circle avatar-xs'
@@ -329,9 +328,9 @@ const Home = () => {
                               srcset=''
                             />
                           </div>
-                          <div className='col-auto ps-4 text-muted fw-semi-bold fs-6'>
-                            <span>Ted Hawkins</span>
-                          </div>
+                          <Row className='course-card col-auto ms-auto'>
+                            <span className='course-card'>Angelina Jolie</span>
+                          </Row>
                           <div className='col-auto ms-auto'>
                             <a href='#'>
                               <i className='bi bi-bookmark'></i>
@@ -352,27 +351,27 @@ const Home = () => {
                         <h6 className='card-title'>
                           The Python Course: build web application
                         </h6>
-                        <ul className='mb-2 list-inline mt-3'>
-                          <li className='list-inline-item'>
+                        <ul className='course-card mb-2 list-inline mt-3'>
+                          <li className='course-card list-inline-item'>
                             <span className='position-absolute search-icon'>
                               <i className='bi bi-clock fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary'>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary'>
                               2h:30m
                             </p>
                           </li>
-                          <li className='list-inline-item ps-4'>
+                          <li className='course-card list-inline-item ps-4'>
                             <span className='position-absolute search-icon '>
                               <i className='bi bi-reception-4 fs-6 fw-semi-bold'></i>
                             </span>
-                            <p className='ps-4 fs-6 fw-semi-bold text-secondary '>
+                            <p className='course-card ps-4 fs-6 fw-semi-bold text-secondary '>
                               Advance
                             </p>
                           </li>
                         </ul>
 
-                        <div className='rating-section text-warning'>
-                          <span>
+                        <div className='course-card rating-section text-warning'>
+                          <span className='course-card '>
                             <i className='bi bi-star-fill '></i>
                             <i className='bi bi-star-fill'></i>
                             <i className='bi bi-star-fill'></i>
@@ -380,11 +379,13 @@ const Home = () => {
                             <i className='bi bi-star-fill'></i>
                             4.5
                           </span>
-                          <span className='text-secondary'>(13,245)</span>
+                          <span className='course-card text-secondary'>
+                            (13,245)
+                          </span>
                         </div>
                       </div>
                       <div className='card-footer'>
-                        <div className='row align-items-center g-0'>
+                        <div className='course-card row align-items-center g-0'>
                           <div className='col-1'>
                             <Image
                               className='rounded-circle avatar-xs'
@@ -394,9 +395,9 @@ const Home = () => {
                               srcset=''
                             />
                           </div>
-                          <div className='col-auto ps-4 text-muted fw-semi-bold fs-6'>
-                            <span>Claire Robertson</span>
-                          </div>
+                          <Row className='course-card col-auto ms-auto'>
+                            <span className='course-card'>Brad Pitt</span>
+                          </Row>
                           <div className='col-auto ms-auto'>
                             <a href='#'>
                               <i className='bi bi-bookmark'></i>
