@@ -16,7 +16,7 @@ const Header = () => {
     <div>
       <Navbar className='' collapseOnSelect expand='lg' sticky='top'>
         <Container fluid>
-          <img src='client/public/images/html.png' alt='' />
+          <Image src='client/public/images/y.png' alt='' />
           <Navbar.Brand href='#home' className='text-white'>
             YLearn
           </Navbar.Brand>

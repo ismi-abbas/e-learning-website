@@ -37,7 +37,7 @@ const Home = () => {
               >
                 Register
               </a>
-              <a className='btn bg-white fw-bold' href='#login'>
+              <a className='btn text-white fw-bold' href='#login'>
                 Are You a Member?
               </a>
             </div>
