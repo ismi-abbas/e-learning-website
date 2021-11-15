@@ -1,21 +1,20 @@
 import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Home from './components/Home';
+import AdminHeader from './components/Admin/AdminHeader';
+import AdminDashboard from './components/Admin/AdminDashboard';
 import Footer from './components/Footer';
-import Course from './components/Course';
+import AdminMain from './components/Admin/AdminMain';
 
 //Parent component
 function App() {
   return (
-    <div className='App container py-3'>
-      <Header />
-      <Home />
+    <div class='wrapper'>
+      <AdminHeader />
+      <AdminDashboard />
+      <AdminMain />
       <br />
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

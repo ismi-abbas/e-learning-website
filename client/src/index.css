@@ -5,7 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: darkslateblue;
 }
 
 select.form-control,
@@ -17,30 +16,61 @@ input[type='file'] {
   width: 100%;
 }
 
-.main-container {
-  height: 100vh;
+body {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: 'Poppins', sans-serif;
+#navbar-default #navbarBrowse:hover,
+#navbarPage:hover,
+#navbarAccount:hover {
+  color: #754ffe;
 }
 
-.email-bar {
-  width: 400px;
-  align-content: center;
-  display: flex;
-  float: right;
-  justify-content: center;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
+.dropdown .dropdown-menu #dropdownNotificationSecond:active,
+.dropdown .dropdown-menu #dropdownNotificationSecond:hover {
+  color: #5e3fcb;
+  background-color: #ecebf1;
+}
+
+.dropdown .dropdown-menu .dropdown-item:active,
+.dropdown .dropdown-menu .dropdown-item:hover {
+  color: #5e3fcb;
+  background-color: #ecebf1;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-dropdown:hover .sub-dropdown-item {
+  left: 100%;
+  display: block;
+  min-width: 12rem;
+  right: 0;
+  top: -11px;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .dropdown-menu .dropdown-submenu.dropend .dropdown-menu {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+  left: 100%;
+}
+
+.navbar .dropdown-menu .dropdown-submenu.dropend .three {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+  left: 100%;
+  min-width: 12rem;
+  right: 0;
+  top: -18px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #18113c;
+  font-size: 0.915rem;
+  font-weight: 500;
+  padding: 0.3125rem 0.5rem;
 }
 
 .bi-file-earmark-text,
@@ -95,7 +125,7 @@ a.btn.btn-success.fw-bold {
   display: block;
 }
 
-#register:hover {
+#BrowseCourses:hover {
   background-color: #1f8669;
 }
 
@@ -106,11 +136,4 @@ a.btn:hover {
 
 .bi-bell:hover {
   color: #fff;
-}
-
-.card,
-.card-body,
-.card-title,
-.course-card {
-  background-color: white;
 }
