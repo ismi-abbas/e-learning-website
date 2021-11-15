@@ -5,6 +5,7 @@ const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
+const Course = require('../../models/Course');
 
 // @route    GET api/profile/me
 // @desc     Get current users profile
@@ -103,7 +104,6 @@ router.post(
 // @route    GET api/profile
 // @desc     Get all profiles
 // @access   Public
-
 router.get('/', async (req, res) => {
   try {
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
@@ -117,7 +117,6 @@ router.get('/', async (req, res) => {
 // @route    GET api/profile/user/:user_id
 // @desc     Get profile by user ID
 // @access   Public
-
 router.get('/user/:user_id', async (req, res) => {
   try {
     const profile = await Profile.findOne({
@@ -158,4 +157,67 @@ router.delete('/', auth, async (req, res) => {
   }
 });
 
+// @route    PUT api/profile/courses
+// @desc     Add courses by user
+// @access   Private
+router.put(
+  '/courses',
+  [
+    auth,
+    [
+      check('title', 'Title is required').not().isEmpty(),
+      check('desc', 'Description is required').not().isEmpty(),
+      // check('link', 'Please provide a link').not().isEmpty(),
+    ],
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.json(400).json({ errors: errors.array() });
+    }
+    // Desconsruct the req data
+    const { title, desc } = req.body;
+    // Create new data with the data submitted
+    const newCourse = {
+      title,
+      desc,
+    };
+
+    try {
+      const profile = await Profile.findOne({ user: req.user.id });
+
+      profile.courses.unshift(newCourse);
+
+      await profile.save();
+
+      res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
+);
+
+// @route    DELETE api/profile/courses
+// @desc     Delete user course
+// @access   Private
+router.delete('/courses/:course_id', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    // Get remove index
+    const removeIndex = profile.courses
+      .map((item) => item.id)
+      .indexOf(req.params.course_id);
+
+    profile.courses.splice(removeIndex, 1);
+
+    await profile.save();
+
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 module.exports = router;

@@ -1,27 +1,29 @@
 const mongoose = require('mongoose');
-// Use mongoose.schema to create collections(table) on mongodb
-const CourseSchema = new mongoose.Schema({
-  info: {
-    name: {
-      type: String,
-      required: true,
-    },
-    desc: {
-      type: String,
-    },
-    dateAdded: {
-      type: Date(),
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
+const Schema = mongoose.Schema;
+// Array of courses uploaded
+const CourseSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users',
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  desc: {
+    type: String,
+  },
+  uploadedBy: {
+    type: String,
+  },
+  courseVideo: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'upload',
   },
   date: {
-    type: Date(),
+    type: Date,
     default: Date.now,
   },
 });
-
 // Export module then set the model
 module.exports = Course = mongoose.model('course', CourseSchema);

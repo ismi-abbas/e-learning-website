@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
-  // Profile info
+  // Profile info referenced by user model
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
@@ -23,16 +23,16 @@ const ProfileSchema = new mongoose.Schema({
   bio: {
     type: String,
   },
-  //   All courses uploaded
+  //   All courses uploaded reference by course model
   courses: [
     {
-      courseTitle: {
+      title: {
         type: String,
       },
-      courseDesc: {
+      desc: {
         type: String,
       },
-      courseVideo: {
+      url: {
         type: String,
         ref: 'courses',
       },
@@ -42,6 +42,10 @@ const ProfileSchema = new mongoose.Schema({
       },
     },
   ],
+  // courses: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'course',
+  // },
   social: {
     twitter: {
       type: String,
