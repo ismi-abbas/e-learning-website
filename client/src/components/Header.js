@@ -7,26 +7,39 @@ import {
   Form,
   FormControl,
   Button,
+  Container,
+  Image,
 } from 'react-bootstrap'; //Navigation from bootstrap
 
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
-        <Navbar.Brand href='#home'>YLearn</Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='me-auto'>
-            <Nav.Link href='#courses'>Courses</Nav.Link>
-            <Nav.Link href='#subscribePlan'>Subsribe Plan</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href='#register'>Register</Nav.Link>
-            <Nav.Link eventKey={2} href='#login'>
-              Login
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+      <Navbar className='' collapseOnSelect expand='lg' sticky='top'>
+        <Container fluid>
+          <Image src='client/public/images/y.png' alt='' />
+          <Navbar.Brand href='#home' className='text-white'>
+            YLearn
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='me-auto'>
+              <Nav.Link href='#courses' className='text-white'>
+                Courses
+              </Nav.Link>
+              <Nav.Link href='#subscribePlan' className='text-white'>
+                Subsribe Plan
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href='#register' className='text-white'>
+                Register
+              </Nav.Link>
+              <Nav.Link eventKey={2} href='#login' className='text-white'>
+                Login
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
     </div>
   );

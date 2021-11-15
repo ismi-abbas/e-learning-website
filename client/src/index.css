@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: darkslateblue;
 }
 
 select.form-control,
@@ -40,4 +41,76 @@ input[type='file'] {
   justify-content: center;
   color: #333;
   font-family: 'Poppins', sans-serif;
+}
+
+.bi-file-earmark-text,
+.bi-stack {
+  color: #5e3fcb;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}
+
+.flex-icon-fiv:hover {
+  color: #5e3fcb;
+  background-color: #ecebf1;
+}
+
+.indicator-primary.indicator:before {
+  background-color: #754ffe;
+}
+
+.indicator:before {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  content: '';
+  height: 0.75rem;
+  position: absolute;
+  right: 0.18rem;
+  top: 0;
+  width: 0.75rem;
+}
+
+.bg-primary {
+  background-color: rgba(
+    var(--bs-primary-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+
+.card:hover {
+  border: 0;
+  background: #fff;
+  box-shadow: 0 0 1px 1px rgb(29 17 51 / 5%), 0 0 3px 2px rgb(9 32 77 / 19%),
+    0 0 2px -3px rgb(29 17 51 / 15%);
+  transition: box-shadow 0.25s ease;
+}
+
+a.btn.btn-success.fw-bold {
+  background-color: #19cb98;
+  border-color: #19cb98;
+  color: #fff;
+}
+
+.nav .navbar-nav .dropdown-menu .list-group {
+  display: block;
+}
+
+#register:hover {
+  background-color: #1f8669;
+}
+
+a.btn:hover {
+  background-color: #5e3fcb;
+  color: #fff;
+}
+
+.bi-bell:hover {
+  color: #fff;
+}
+
+.card,
+.card-body,
+.card-title,
+.course-card {
+  background-color: white;
 }
