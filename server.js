@@ -18,9 +18,6 @@ app.use(express.json({ extended: false }));
 // GET request if API is running
 app.get('/', (req, res) => res.send('API is running successfully'));
 
-// Init GFS
-let gfs;
-
 // Stream Grid-Fs with mongoose
 const conn = mongoose.createConnection();
 conn.once('open', function () {
@@ -36,6 +33,6 @@ app.use('/api/course', require('./routes/api/course'));
 app.use('/api/upload', require('./routes/api/upload')); // Upload route
 
 // Store PORT in a variable
-const PORT = process.env.PORT || 5001; //process.env for deployment env
+const PORT = process.env.PORT || 5000; //process.env for deployment env
 // Port to listen
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));

@@ -5,7 +5,7 @@ function clickForMonthlySubscribe() {
   // direct to payment page
 }
 
-const subscribepageplan = () => {
+const SubscribePlan = () => {
   return (
     <div>
       <div className='row>'>
@@ -60,4 +60,4 @@ const subscribepageplan = () => {
   );
 };
 
-export default subscribepageplan;
+export default SubscribePlan;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
+import { Link } from 'react-router-dom';
 
 const ClientHeader = () => {
   return (
@@ -7,26 +8,26 @@ const ClientHeader = () => {
       {/* Navigation Bar */}
       <nav className='navbar navbar-expand-lg navbar-default '>
         <div className='container-fluid'>
-          <a className='navbar-brand' href='#'>
+          <Link to='#' className='navbar-brand'>
             {' '}
             <img
               src='#logo'
               alt
               className='d-inline-block align-text-top p-1'
             />
-          </a>
+          </Link>
           <div className='collapse navbar-collapse ' id='navbar-default'>
             <ul className='nav navbar-nav navbar-nav-lg '>
               <li className='navbar-item dropdown  px-2 '>
-                <a
-                  href='#'
+                <Link
+                  to='/'
                   className='nav-link'
                   id='navbarHome'
                   data-bs-toggle
                   data-bs-display
                 >
                   Home <span className='carpet' />
-                </a>
+                </Link>
               </li>
               {/* Courses Section */}
               <li className='navbar-item dropdown  px-2'>
@@ -73,13 +74,21 @@ const ClientHeader = () => {
           {/* Avatar Icons Right Side */}
           {/* UserPanel */}
           <div>
-            <a className='btn btn-danger fw-bold' href='#' id='register'>
+            <Link
+              className='btn btn-danger fw-bold'
+              to='/register'
+              id='register'
+            >
               Register
-            </a>
+            </Link>
             <span>&nbsp;</span>
-            <a className='btn btn-success fw-bold' href='#' id='login'>
+            <Link
+              className='btn btn-success fw-bold'
+              to='/ClientLoginModal'
+              id='login'
+            >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

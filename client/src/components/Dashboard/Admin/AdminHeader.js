@@ -1,10 +1,11 @@
 import React from 'react';
+import AdminMain from '../layout/AdminMain';
 
 const AdminHeader = () => {
   return (
     <div>
       {/* Navigarion Bar */}
-      <nav className='navbar navbar-expand-lg navbar-default '>
+      <nav className='navbar navbar-expand-md navbar-default '>
         <div className='container-fluid'>
           <a className='navbar-brand' href='#'>
             {' '}
@@ -225,6 +226,7 @@ const AdminHeader = () => {
           </ul>
         </div>
       </nav>
+      <AdminMain />
     </div>
   );
 };
