@@ -6,9 +6,9 @@ const ClientHeader = () => {
   return (
     <div>
       {/* Navigation Bar */}
-      <nav className='navbar navbar-expand-lg navbar-default '>
+      <nav className='navbar navbar-expand-sm navbar-default '>
         <div className='container-fluid'>
-          <Link to='#' className='navbar-brand'>
+          <Link to='/' className='navbar-brand'>
             {' '}
             <img
               src='#logo'
@@ -82,11 +82,7 @@ const ClientHeader = () => {
               Register
             </Link>
             <span>&nbsp;</span>
-            <Link
-              className='btn btn-success fw-bold'
-              to='/ClientLoginModal'
-              id='login'
-            >
+            <Link className='btn btn-success fw-bold' to='/login' id='login'>
               Login
             </Link>
           </div>

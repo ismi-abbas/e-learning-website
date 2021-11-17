@@ -1,12 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 
 const Footer = () => {
   return (
     <div>
       <div className='container'>
         <div className='row'>
-          <div className='col-sm-8'>
+          <div className='col-8'>
             <h2>WE HAVE ACHIEVE</h2>
             <p>5000 Students, 120 Countries, 30,000 Courses Published</p>
           </div>

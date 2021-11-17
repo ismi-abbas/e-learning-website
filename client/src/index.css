@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+  /* background-color: rgb(238, 248, 228); */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
 
 select.form-control,
@@ -14,22 +20,6 @@ input.form-control {
 }
 input[type='file'] {
   width: 100%;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: 'Poppins', sans-serif;
 }
 
 #navbar-default #navbarBrowse:hover,
@@ -157,4 +147,67 @@ a.btn:hover {
   justify-content: center;
   color: #333;
   font-family: 'Poppins', sans-serif;
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.rounded-4 {
+  border-radius: 0.5rem;
+}
+.rounded-5 {
+  border-radius: 0.75rem;
+}
+.rounded-6 {
+  border-radius: 1rem;
+}
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom 0.75s ease-in-out;
+}
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+.modal-alert .modal-dialog {
+  width: 380px;
+}
+
+.border-right {
+  border-right: 1px solid #eee;
+}
+
+.modal-tour .modal-dialog {
+  width: 380px;
+}
+
+.register-box {
+  /* background-color: #ced4da; */
+  margin-top: 20px;
+  color: #32325d;
+  border-radius: 10px;
+  border: 1px solid #333;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.register-box button {
+  align-content: center;
+  justify-content: center;
+}
+.exist Span {
+  text-decoration: none;
 }

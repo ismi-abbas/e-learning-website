@@ -3,12 +3,10 @@ import '../../index.css';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
-const Register = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: '',
-    password2: '',
   });
 
   const { name, email, password, password2 } = formData;
@@ -22,7 +20,7 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('Password didnt match');
+      console.log('Password doesnt match');
     } else {
       console.log('Succcess');
     }
@@ -33,17 +31,7 @@ const Register = () => {
       <div className='m-3 p-3'>
         <div className='row px-5'>
           <form className='sign-up' onSubmit={(e) => onSubmit(e)}>
-            <h2 className='heading my-2'>Sign Up</h2>
-            <div className='form-group fone mt-2'>
-              <input
-                type='name'
-                className='form-control'
-                placeholder='Name'
-                name='name'
-                value={name}
-                onChange={(e) => onChange(e)}
-              />
-            </div>
+            <h2 className='heading my-2'>Sign In </h2>
             <div className='form-group fone mt-2'>
               <input
                 type='email'
@@ -64,34 +52,24 @@ const Register = () => {
                 onChange={(e) => onChange(e)}
               />
             </div>
-            <div className='form-group fone mt-2'>
-              <input
-                type='password'
-                className='form-control'
-                placeholder='Confirm Password'
-                name='password2'
-                value={password2}
-                onChange={(e) => onChange(e)}
-              />
-            </div>
             <button
               type='button'
               className='btn btn-success'
               onClick={onSubmit}
             >
-              Sign Up Now
+              Sign In
             </button>
-            <p className='exist mt-4'>
-              Existing user?{' '}
-              <span>
-                <Link to='/login'>Login</Link>
-              </span>
-            </p>
           </form>
+          <p className='exist mt-4'>
+            No Account?{' '}
+            <span>
+              <Link to='/register'>Register Here</Link>
+            </span>
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default Login;
