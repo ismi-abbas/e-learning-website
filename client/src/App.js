@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Register from './components/auth/Register';
 import ClientHeader from './components/dashboard/user/ClientHeader';
@@ -11,6 +11,8 @@ import Login from './components/auth/Login';
 import Welcome from './components/layout/Welcome';
 import AdminHeader from './components/dashboard/admin/AdminHeader';
 import AdminMain from './components/layout/AdminMain';
+import PrivateRoute from './components/routing/PrivateRoute';
+import Dashboard from './components/layout/Dashboard';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -36,28 +38,26 @@ const App = () => {
      <div>
       <Switch>
        <Route exact path='/'>
-        {/* http://localhost:3000 */}
         <ClientHeader />
         <ClientDashboard />
         <ClientMain />
        </Route>
        <Route path='/register'>
-        {/* http://localhost:3000/register */}
         <ClientHeader />
         <Welcome />
         <Register />
        </Route>
        <Route path='/login'>
-        {/* http://localhost:3000/login */}
         <ClientHeader />
         <Welcome />
         <Login />
        </Route>
        <Route path='/admin'>
-        {/* http://localhost:3000/login */}
         <AdminHeader />
         <AdminMain />
        </Route>
+       {/* PRIVATE ROUTE - ACCESS ONLY WITH AUTHETICATOR(TOKEN)*/}
+       <PrivateRoute path='/dashboard' component={Dashboard} />
       </Switch>
      </div>
      <Footer />

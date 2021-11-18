@@ -35,9 +35,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
  };
 
- //  if (isAuthenticated) {
- //   return <Redirect to='/' />;
- //  }
+ if (isAuthenticated) {
+  return <Redirect to='/dashboard' />;
+ }
 
  return (
   <div className='content justify-content-center mb-5'>
