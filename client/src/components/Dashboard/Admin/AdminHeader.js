@@ -1,5 +1,6 @@
 import React from 'react';
-import AdminMain from '../layout/AdminMain';
+import AdminMain from '../../layout/AdminMain';
+import { Link } from 'react-router-dom';
 
 const AdminHeader = () => {
   return (
@@ -7,65 +8,27 @@ const AdminHeader = () => {
       {/* Navigarion Bar */}
       <nav className='navbar navbar-expand-md navbar-default '>
         <div className='container-fluid'>
-          <a className='navbar-brand' href='#'>
+          <Link className='navbar-brand' href='/'>
             {' '}
             <img
               src='https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg'
               alt
               className='d-inline-block align-text-top p-1'
             />
-          </a>
+          </Link>
           <div className='collapse navbar-collapse ' id='navbar-default'>
             <ul className='nav navbar-nav navbar-nav-lg '>
-              <li className='navbar-item dropdown  px-2 '>
-                <a
-                  href='#'
-                  className='nav-link'
-                  id='navbarHome'
-                  data-bs-toggle
-                  data-bs-display
-                >
-                  Home <span className='carpet' />
-                </a>
-              </li>
-              {/* Courses Section */}
+              {/* Home Section */}
               <li className='navbar-item dropdown  px-2'>
-                <a
-                  href='#'
-                  className='nav-link dropdown-toggle'
+                <Link
+                  href='/'
+                  className='nav-link'
                   id='navbarPage'
                   data-bs-toggle
                   data-bs-display
                 >
-                  Courses
-                </a>
-                {/* List Items  of Courses Section */}
-                <ul className='dropdown-menu dropdown-menu-arrow submenu'>
-                  <li className='dropdown dropend sub-dropdown  '>
-                    <a
-                      href='#'
-                      className='dropdown-item dropdown-list-group-item dropdown-toggle'
-                    >
-                      Courses
-                    </a>
-                    {/* Item Lists Of web development Section , SubDropDown */}
-                    <ul className='dropdown-menu sub-dropdown-item'>
-                      <div>
-                        <li>
-                          <a href='#' className='dropdown-item '>
-                            Bootstrap
-                          </a>{' '}
-                        </li>
-                        {/* Dropdown-items Of  web development Section */}
-                        <li>
-                          <a href='#' className='dropdown-item  '>
-                            React
-                          </a>
-                        </li>
-                      </div>
-                    </ul>
-                  </li>
-                </ul>
+                  Home
+                </Link>
               </li>
               {/* 3 dot menu section */}
               <li className='navbar-item dropdown px-2'>
@@ -78,41 +41,6 @@ const AdminHeader = () => {
                 >
                   <i className='bi bi-three-dots' />
                 </a>
-                {/* List Items  of Accounts Section */}
-                <ul className='dropdown-menu dropdown-menu-arrow submenu'>
-                  <li className='dropdown dropend sub-dropdown '>
-                    <div className='d-flex bd-highlight px-2 flex-icon-fiv'>
-                      <div className='px-1 flex-shrink-1 bd-highlight'>
-                        <i className='bi bi-file-earmark-text ' />
-                      </div>
-                      <div className=' w-100 bd-highlight pe-3 inline-size: max-content'>
-                        <div className='d-flex flex-column bd-highlight ps-2'>
-                          <div className=' bd-highlight'> Documentations</div>
-                          <div className='bd-highlight'>
-                            <p className>
-                              <small>Browse all the documentations.</small>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='d-flex bd-highlight px-2 flex-icon-fiv'>
-                      <div className=' px-1 flex-shrink-1 bd-highlight'>
-                        <i className='bi bi-stack' />
-                      </div>
-                      <div className=' w-100 bd-highlight pe-2'>
-                        <div className='d-flex flex-column bd-highlight ps-2'>
-                          <div className='bd-highlight'>ChangeLog</div>
-                          <div className='bd-highlight'>
-                            <p>
-                              <small>See Whats New</small>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
               </li>
               {/* Search Form */}
             </ul>

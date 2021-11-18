@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UserHeader = () => {
   return (
@@ -6,26 +7,37 @@ const UserHeader = () => {
       {/* Navigarion Bar */}
       <nav className='navbar navbar-expand-lg navbar-default '>
         <div className='container-fluid'>
-          <a className='navbar-brand' href='#'>
+          <Link className='navbar-brand' to='/'>
             {' '}
             <img
               src='https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg'
               alt
               className='d-inline-block align-text-top p-1'
             />
-          </a>
+          </Link>
           <div className='collapse navbar-collapse ' id='navbar-default'>
             <ul className='nav navbar-nav navbar-nav-lg '>
               <li className='navbar-item dropdown  px-2 '>
-                <a
-                  href='#'
+                <Link
+                  href='/course'
                   className='nav-link'
                   id='navbarCourses'
                   data-bs-toggle
                   data-bs-display
                 >
                   Courses <span className='carpet' />
-                </a>
+                </Link>
+              </li>
+              <li className='navbar-item dropdown  px-2 '>
+                <Link
+                  href='/learning'
+                  className='nav-link'
+                  id='navbarLearning'
+                  data-bs-toggle
+                  data-bs-display
+                >
+                  My Learning <span className='carpet' />
+                </Link>
               </li>
               {/* Search Form */}
             </ul>
