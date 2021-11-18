@@ -1,213 +1,218 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  /* background-color: rgb(238, 248, 228); */
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+ font-family: 'Poppins', sans-serif;
+ font-size: 1rem;
 }
 
 select.form-control,
 textarea.form-control,
 input.form-control {
-  font-size: 1rem;
+ font-size: 1rem;
 }
 input[type='file'] {
-  width: 100%;
+ width: 100%;
 }
 
 #navbar-default #navbarBrowse:hover,
 #navbarPage:hover,
 #navbarAccount:hover {
-  color: #754ffe;
+ color: #754ffe;
 }
 
 .dropdown .dropdown-menu #dropdownNotificationSecond:active,
 .dropdown .dropdown-menu #dropdownNotificationSecond:hover {
-  color: #5e3fcb;
-  background-color: #ecebf1;
+ color: #5e3fcb;
+ background-color: #ecebf1;
 }
 
 .dropdown .dropdown-menu .dropdown-item:active,
 .dropdown .dropdown-menu .dropdown-item:hover {
-  color: #5e3fcb;
-  background-color: #ecebf1;
+ color: #5e3fcb;
+ background-color: #ecebf1;
 }
 
 .dropdown:hover .submenu {
-  display: block;
-  transition: 0.5s ease-in-out;
+ display: block;
+ transition: 0.5s ease-in-out;
 }
 
 .sub-dropdown:hover .sub-dropdown-item {
-  left: 100%;
-  display: block;
-  min-width: 12rem;
-  right: 0;
-  top: -11px;
-  transition: 0.5s ease-in-out;
+ left: 100%;
+ display: block;
+ min-width: 12rem;
+ right: 0;
+ top: -11px;
+ transition: 0.5s ease-in-out;
 }
 
 .navbar .dropdown-menu .dropdown-submenu.dropend .dropdown-menu {
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
-  left: 100%;
+ border-radius: 0.5rem;
+ box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+ left: 100%;
 }
 
 .navbar .dropdown-menu .dropdown-submenu.dropend .three {
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
-  left: 100%;
-  min-width: 12rem;
-  right: 0;
-  top: -18px;
+ border-radius: 0.5rem;
+ box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+ left: 100%;
+ min-width: 12rem;
+ right: 0;
+ top: -18px;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
-  color: #18113c;
-  font-size: 0.915rem;
-  font-weight: 500;
-  padding: 0.3125rem 0.5rem;
+ color: #18113c;
+ font-size: 0.915rem;
+ font-weight: 500;
+ padding: 0.3125rem 0.5rem;
 }
 
 .bi-file-earmark-text,
 .bi-stack {
-  color: #5e3fcb;
-  text-shadow: 1px 1px 1px #ccc;
-  font-size: 1.5em;
+ color: #5e3fcb;
+ text-shadow: 1px 1px 1px #ccc;
+ font-size: 1.5em;
 }
 
 .flex-icon-fiv:hover {
-  color: #5e3fcb;
-  background-color: #ecebf1;
+ color: #5e3fcb;
+ background-color: #ecebf1;
 }
 
 .indicator-primary.indicator:before {
-  background-color: #754ffe;
+ background-color: #754ffe;
 }
 
 .indicator:before {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  content: '';
-  height: 0.75rem;
-  position: absolute;
-  right: 0.18rem;
-  top: 0;
-  width: 0.75rem;
+ border: 2px solid #fff;
+ border-radius: 50%;
+ content: '';
+ height: 0.75rem;
+ position: absolute;
+ right: 0.18rem;
+ top: 0;
+ width: 0.75rem;
 }
 
 .bg-primary {
-  background-color: rgba(
-    var(--bs-primary-rgb),
-    var(--bs-bg-opacity)
-  ) !important;
+ background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .card:hover {
-  border: 0;
-  background: #fff;
-  box-shadow: 0 0 1px 1px rgb(29 17 51 / 5%), 0 0 3px 2px rgb(9 32 77 / 19%),
-    0 0 2px -3px rgb(29 17 51 / 15%);
-  transition: box-shadow 0.25s ease;
+ border: 0;
+ background: #fff;
+ box-shadow: 0 0 1px 1px rgb(29 17 51 / 5%), 0 0 3px 2px rgb(9 32 77 / 19%),
+  0 0 2px -3px rgb(29 17 51 / 15%);
+ transition: box-shadow 0.25s ease;
 }
 
 a.btn.btn-success.fw-bold {
-  background-color: #19cb98;
-  border-color: #19cb98;
-  color: #fff;
+ background-color: #19cb98;
+ border-color: #19cb98;
+ color: #fff;
 }
 
 .nav .navbar-nav .dropdown-menu .list-group {
-  display: block;
+ display: block;
 }
 
 #BrowseCourses:hover {
-  background-color: #1f8669;
+ background-color: #1f8669;
 }
 
 a.btn:hover {
-  background-color: #5e3fcb;
-  color: #fff;
+ background-color: #5e3fcb;
+ color: #fff;
 }
 
 .bi-bell:hover {
-  color: #fff;
+ color: #fff;
 }
 .email-bar {
-  width: 400px;
-  align-content: center;
-  display: flex;
-  float: right;
-  justify-content: center;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
+ width: 400px;
+ align-content: center;
+ display: flex;
+ float: right;
+ justify-content: center;
+ color: #333;
+ font-family: 'Poppins', sans-serif;
 }
 
 .b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: solid rgba(0, 0, 0, 0.15);
-  border-width: 1px 0;
-  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+ height: 3rem;
+ background-color: rgba(0, 0, 0, 0.1);
+ border: solid rgba(0, 0, 0, 0.15);
+ border-width: 1px 0;
+ box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+  inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
 .bi {
-  vertical-align: -0.125em;
-  fill: currentColor;
+ vertical-align: -0.125em;
+ fill: currentColor;
 }
 
 .rounded-4 {
-  border-radius: 0.5rem;
+ border-radius: 0.5rem;
 }
 .rounded-5 {
-  border-radius: 0.75rem;
+ border-radius: 0.75rem;
 }
 .rounded-6 {
-  border-radius: 1rem;
+ border-radius: 1rem;
 }
 
 .modal-sheet .modal-dialog {
-  width: 380px;
-  transition: bottom 0.75s ease-in-out;
+ width: 380px;
+ transition: bottom 0.75s ease-in-out;
 }
 .modal-sheet .modal-footer {
-  padding-bottom: 2rem;
+ padding-bottom: 2rem;
 }
 
 .modal-alert .modal-dialog {
-  width: 380px;
+ width: 380px;
 }
 
 .border-right {
-  border-right: 1px solid #eee;
+ border-right: 1px solid #eee;
 }
 
 .modal-tour .modal-dialog {
-  width: 380px;
-}
-
-.register-box {
-  /* background-color: #ced4da; */
-  margin-top: 20px;
-  color: #32325d;
-  border-radius: 10px;
-  border: 1px solid #333;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
+ width: 380px;
 }
 
 .register-box button {
-  align-content: center;
-  justify-content: center;
+ align-content: center;
+ justify-content: center;
 }
 .exist Span {
-  text-decoration: none;
+ text-decoration: none;
+}
+
+.content {
+ max-width: 500px;
+ margin: 30px auto;
+ overflow: auto;
+ min-height: 300px;
+ border: 1px solid steelblue;
+ padding: 30px;
+ border-radius: 5px;
+ align-content: center;
+ text-align: center;
+}
+
+.alert-passsword {
+ padding: 0.8rem;
+ margin: 1rem 0;
+ opacity: 0.9;
+ background: var(--light-color);
+ color: #333;
 }

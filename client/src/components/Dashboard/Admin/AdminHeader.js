@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminMain from '../layout/AdminMain';
+import { Link } from 'react-router-dom';
 
 const AdminHeader = () => {
   return (
@@ -18,27 +18,27 @@ const AdminHeader = () => {
           <div className='collapse navbar-collapse ' id='navbar-default'>
             <ul className='nav navbar-nav navbar-nav-lg '>
               <li className='navbar-item dropdown  px-2 '>
-                <a
-                  href='#'
+                <Link
+                  to='/'
                   className='nav-link'
                   id='navbarHome'
                   data-bs-toggle
                   data-bs-display
                 >
                   Home <span className='carpet' />
-                </a>
+                </Link>
               </li>
               {/* Courses Section */}
               <li className='navbar-item dropdown  px-2'>
-                <a
-                  href='#'
+                <Link
+                  to='/course'
                   className='nav-link dropdown-toggle'
                   id='navbarPage'
                   data-bs-toggle
                   data-bs-display
                 >
                   Courses
-                </a>
+                </Link>
                 {/* List Items  of Courses Section */}
                 <ul className='dropdown-menu dropdown-menu-arrow submenu'>
                   <li className='dropdown dropend sub-dropdown  '>
@@ -226,7 +226,6 @@ const AdminHeader = () => {
           </ul>
         </div>
       </nav>
-      <AdminMain />
     </div>
   );
 };
