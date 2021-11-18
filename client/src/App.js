@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Register from './components/auth/Register';
+import SubscribePlan from './components/layout/SubscribePlan';
 import ClientHeader from './components/dashboard/user/ClientHeader';
 import ClientMain from './components/dashboard/user/ClientMain';
 import ClientDashboard from './components/dashboard/user/ClientDashboard';
@@ -46,6 +47,7 @@ const App = () => {
         <ClientHeader />
         <Welcome />
         <Register />
+        <SubscribePlan />
        </Route>
        <Route path='/login'>
         <ClientHeader />
