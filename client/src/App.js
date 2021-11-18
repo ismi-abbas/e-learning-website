@@ -2,24 +2,25 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Footer from './components/Footer';
-import Register from './components/auth/Register';
-import SubscribePlan from './components/layout/SubscribePlan';
-import ClientHeader from './components/dashboard/user/ClientHeader';
-import ClientMain from './components/dashboard/user/ClientMain';
-import ClientDashboard from './components/dashboard/user/ClientDashboard';
-import Login from './components/auth/Login';
-import Welcome from './components/layout/Welcome';
-import AdminHeader from './components/dashboard/admin/AdminHeader';
-import AdminMain from './components/layout/AdminMain';
-import PrivateRoute from './components/routing/PrivateRoute';
-import Profile from './components/layout/Profile';
-import UserHeader from '../src/components/page/user/UserHeader';
-import UserMain from '../src/components/page/user/UserMain';
-import UserDashboard from '../src/components/page/user/UserDashboard';
-import UserLearning from '../src/components/page/user/UserLearning';
-import AdminDashboard from '../src/components/layout/AdminDashboard';
-import AdminSidebar from './components/dashboard/admin/AdminSidebar';
+import Footer from '../src/components//Footer';
+import Register from '../src/components/auth/Register';
+import SubscribePlan from '../src/components/layout/SubscribePlan';
+import ClientHeader from '../src/components/Dashboard/User/ClientHeader';
+import ClientMain from '../src/components/Dashboard/User/ClientMain';
+import ClientDashboard from '../src/components/Dashboard/User/ClientDashboard';
+import Login from '../src/components/auth/Login';
+import Welcome from '../src/components/layout/Welcome';
+import AdminHeader from '../src/components/Dashboard/Admin/AdminHeader';
+import AdminMain from '../src/components/layout/AdminMain';
+import PrivateRoute from '../src/components/routing/PrivateRoute';
+import Profile from '../src/components/layout/Profile';
+import UserHeader from '../src/components//page/user/UserHeader';
+import UserMain from '../src/components//page/user/UserMain';
+import UserDashboard from '../src/components//page/user/UserDashboard';
+import UserLearning from '../src/components//page/user/UserLearning';
+import AdminDashboard from '../src/components//layout/AdminDashboard';
+import AdminSidebar from '../src/components/Dashboard/Admin/AdminSidebar';
+import AdminUpload from './components/Dashboard/Admin/AdminUpload';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -58,7 +59,7 @@ const App = () => {
         <Welcome />
         <Login />
        </Route>
-       <Route path='/admin'>
+       <Route path='/Admin'>
         <AdminHeader />
         <AdminMain />
        </Route>
@@ -76,6 +77,10 @@ const App = () => {
         <ClientHeader />
         <UserDashboard />
         <UserLearning />
+       </Route>
+       <Route exact path='/user'>
+        <AdminHeader />
+        <AdminUpload />
        </Route>
        {/* PRIVATE ROUTE - ACCESS ONLY WITH AUTHETICATOR(TOKEN)*/}
        <PrivateRoute path='/profile' component={Profile} />
