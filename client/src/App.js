@@ -13,7 +13,13 @@ import Welcome from './components/layout/Welcome';
 import AdminHeader from './components/dashboard/admin/AdminHeader';
 import AdminMain from './components/layout/AdminMain';
 import PrivateRoute from './components/routing/PrivateRoute';
-import Dashboard from './components/layout/Dashboard';
+import Profile from './components/layout/Profile';
+import UserHeader from '../src/components/page/user/UserHeader';
+import UserMain from '../src/components/page/user/UserMain';
+import UserDashboard from '../src/components/page/user/UserDashboard';
+import UserLearning from '../src/components/page/user/UserLearning';
+import AdminDashboard from '../src/components/layout/AdminDashboard';
+import AdminSidebar from './components/dashboard/admin/AdminSidebar';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -24,7 +30,6 @@ import setAuthToken from './utils/setAuthToken';
 if (localStorage.token) {
  setAuthToken(localStorage.token);
 }
-
 //Parent component
 const App = () => {
  // useEffect Hook
@@ -47,7 +52,6 @@ const App = () => {
         <ClientHeader />
         <Welcome />
         <Register />
-        <SubscribePlan />
        </Route>
        <Route path='/login'>
         <ClientHeader />
@@ -58,8 +62,23 @@ const App = () => {
         <AdminHeader />
         <AdminMain />
        </Route>
+       <Route path='/subscribe'>
+        <ClientHeader />
+        <Welcome />
+        <SubscribePlan />
+       </Route>
+       <Route exact path='/learning'>
+        <ClientHeader />
+        <UserDashboard />
+        <UserLearning />
+       </Route>
+       <Route exact path='/user'>
+        <ClientHeader />
+        <UserDashboard />
+        <UserLearning />
+       </Route>
        {/* PRIVATE ROUTE - ACCESS ONLY WITH AUTHETICATOR(TOKEN)*/}
-       <PrivateRoute path='/dashboard' component={Dashboard} />
+       <PrivateRoute path='/profile' component={Profile} />
       </Switch>
      </div>
      <Footer />

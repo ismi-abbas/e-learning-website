@@ -53,15 +53,15 @@ const AdminSidebar = () => {
                 </a>
               </li>
               <li className='nav-item'>
-                <a href='#courses' className='nav-link'>
+                <a href='/course' className='nav-link'>
                   <i className='nav-icon fas fa-book-reader' />
                   <p>Courses</p>
                 </a>
               </li>
               <li className='nav-item'>
-                <a href='#subscribe' className='nav-link'>
+                <a href='#addCourse' className='nav-link'>
                   <i class='nav-icon fas fa-plus-square' />
-                  <p>Subscribe Plan</p>
+                  <p>Add Course</p>
                 </a>
               </li>
             </ul>

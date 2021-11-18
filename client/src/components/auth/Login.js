@@ -28,7 +28,7 @@ const Login = ({ login, isAuthenticated }) => {
 
  //  Redirect if logged in
  if (isAuthenticated) {
-  return <Redirect to='/dashboard' />;
+  return <Redirect to='/profile' />;
  }
  return (
   <section className='content justify-content-center mb-5'>

@@ -6,8 +6,10 @@ import { getCurrentProfile } from '../../actions/profile';
 // Component
 import AdminDashboard from './AdminDashboard';
 import Navbar from './Navbar';
+import UserMain from '../page/user/UserMain';
+import UserDashboard from '../page/user/UserDashboard';
 
-const Dashboard = ({ getCurrentProfile, auth, profile }) => {
+const Profile = ({ getCurrentProfile, auth, profile }) => {
  useEffect(() => {
   getCurrentProfile();
  }, []);
@@ -15,12 +17,13 @@ const Dashboard = ({ getCurrentProfile, auth, profile }) => {
  return (
   <div>
    <Navbar />
-   <AdminDashboard />
+   <UserDashboard />
+   <UserMain />
   </div>
  );
 };
 
-Dashboard.propTypes = {
+Profile.propTypes = {
  getCurrentProfile: PropTypes.func.isRequired,
  auth: PropTypes.object.isRequired,
  profile: PropTypes.object.isRequired,
@@ -31,4 +34,4 @@ const mapStateToProps = (state) => ({
  profile: state.profile,
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile })(Profile);
