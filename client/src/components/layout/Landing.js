@@ -1,7 +1,7 @@
 import React from 'react';
-import ClientHeader from '../Dashboard/user/ClientHeader';
-import ClientDashboard from '../Dashboard/user/ClientDashboard';
-import ClientMain from '../Dashboard/user/ClientMain';
+import ClientHeader from '../Dashboard/User/ClientHeader';
+import ClientDashboard from '../Dashboard/User/ClientDashboard';
+import ClientMain from '../Dashboard/User/ClientMain';
 
 const Landing = () => {
   return (
