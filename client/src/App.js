@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Register from './components/auth/Register';
 import Landing from './components/layout/Landing';
-import ClientHeader from './components/dashboard/user/ClientHeader';
-import ClientMain from './components/dashboard/user/ClientMain';
-import ClientDashboard from './components/dashboard/user/ClientDashboard';
+import ClientHeader from './components/Dashboard/User/ClientHeader';
+import ClientMain from './components/Dashboard/User/ClientMain';
+import ClientDashboard from './components/Dashboard/User/ClientDashboard';
 import Login from './components/auth/Login';
 import Welcome from './components/layout/Welcome';
+import SubscribePlan from './components/layout/SubscribePlan';
 
 //Parent component
 function App() {
@@ -35,6 +36,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <SubscribePlan /> {/*havent create button*/}
         <Footer />
       </div>
     </Router>
