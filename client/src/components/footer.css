@@ -1,25 +1,25 @@
 .box {
-  background-color: black;
-  color: white;
+ background-color: #333;
+ color: white;
 }
 
 .Ylearn {
-  font-size: 20px;
+ font-size: 20px;
 }
 
 .details {
-  text-indent: 10px;
+ text-indent: 10px;
 }
 
 .icon {
-  width: 40px;
+ width: 40px;
 }
 
 .foot-community-contact {
-  padding-top: 10px;
-  padding-bottom: 15px;
+ padding-top: 10px;
+ padding-bottom: 15px;
 }
 
 .mx-3 {
-  font: white;
+ font: white;
 }
