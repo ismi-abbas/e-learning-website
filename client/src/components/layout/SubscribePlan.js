@@ -2,13 +2,14 @@ import React from 'react';
 import { FcApproval } from 'react-icons/fc';
 import { FcCheckmark } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+import '../../index.css';
 
 const SubscribePlan = () => {
  return (
   <section>
-   <div className='container my-4 d-flex'>
+   <div className='my-4 d-flex justify-content-center'>
     <div className='row'>
-     <div className='col-lg-5 col-md-8 plan align-items-centre'>
+     <div className='content col-lg-5 col-md-8 plan align-items-centre'>
       <h4 className='plan-text'>MONTHLY PLAN</h4>
       <ul className='list-unstyled'>
        <li>
@@ -54,7 +55,7 @@ const SubscribePlan = () => {
       </div>
      </div>
 
-     <div className='col-lg-5 col-md-8 plan align-items-centre'>
+     <div className='content col-lg-5 col-md-8 plan align-items-centre'>
       <h4 className='plan-text'>ANNUAL PLAN</h4>
       <ul className='list-unstyled'>
        <li>
@@ -75,7 +76,7 @@ const SubscribePlan = () => {
        </li>
       </ul>
       <p className='discount-price'>
-       RM360<span className='ori-price'>Normal Price: 1500</span>
+       RM360 <span className='ori-price'>Normal Price: 1500</span>
       </p>
       <ul className='list-unstyled'>
        <li>

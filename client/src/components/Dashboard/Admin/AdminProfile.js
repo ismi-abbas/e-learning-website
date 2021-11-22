@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import '../../../index.css';
 import { Link } from 'react-router-dom';
 
 // Redux
@@ -18,22 +19,28 @@ const AdminProfile = ({
  return loading && profile === null ? (
   <Spinner />
  ) : (
-  <div className='container my-3 mx-2 p-4 justify-content-center'>
-   <h1 className='card-title large text-secondary'>Dashboard</h1>
-   <p className='lead card-text'>
-    <i className='fas fa-user'></i> Welcome {user && user.name}
-   </p>
-   {profile !== null ? (
-    <>Has</>
-   ) : (
-    <>
-     <p className='lead'>You have not setup a profile, please add some info</p>
-     <Link to='/create-profile' className='btn btn-primary my-1'>
-      Create Profile
-     </Link>
-    </>
-   )}
-  </div>
+  <section className='d-flex justify-content-center'>
+   <div className='dashboard my-3 mx-2 p-4'>
+    <h1 className='card-title lead text-secondary'>Dashboard</h1>
+    <p className='lead card-text'>
+     <i className='fas fa-user'></i> Welcome {user && user.name}
+    </p>
+    {profile !== null ? (
+     <>
+      <Link to='/upload-course' className='btn btn-primary my-1'>
+       Upload Course
+      </Link>
+     </>
+    ) : (
+     <>
+      <p className='lead'>You have not setup a profile, please add some info</p>
+      <Link to='/create-profile' className='btn btn-primary my-1'>
+       Create Profile
+      </Link>
+     </>
+    )}
+   </div>
+  </section>
  );
 };
 

@@ -1,9 +1,5 @@
 import React from 'react';
-import Modal from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import { logout } from '../../../actions/auth';
 
 const ClientNavbar = () => {
  return (
