@@ -1,5 +1,5 @@
-# e-learning-website
-> A simple E-Learning website using React
+# YLEARN - E-Learning-Website
+> A simple E-Learning website using ReactJs, ExpressJs, NodeJs and MongoDb
 
 This an app created using MERN stack. We created this web app to accomplished milestone project in BAC KAP CAP Programme
 
@@ -12,7 +12,7 @@ This an app created using MERN stack. We created this web app to accomplished mi
 
 # add uri of your mongodb connection for example
 
- "mongoURI": "mongodb://localhost/dev-social",
+ "mongoURI": "mongodb://localhost/e-learning-website",
  
 ```
 
