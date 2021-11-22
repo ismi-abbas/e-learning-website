@@ -216,3 +216,15 @@ a.btn:hover {
  background: var(--light-color);
  color: #333;
 }
+
+.dashboard {
+ min-width: 1300px;
+ margin: 30px auto;
+ overflow: auto;
+ min-height: 300px;
+ border: 1px solid steelblue;
+ padding: 30px;
+ border-radius: 5px;
+ align-content: center;
+ text-align: center;
+}

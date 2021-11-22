@@ -5,6 +5,59 @@ import { PropTypes } from 'prop-types';
 import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+ //  If authorized, navbar change
+ const authLinks = (
+  <>
+   <span>&nbsp;</span>
+   <Link
+    className='btn btn-primary fw-bold'
+    to='/profile'
+    id='login'
+    style={{ marginLeft: 2 }}
+   >
+    <i className='fas fa-user' /> {''}
+    <span>Profile</span>
+   </Link>
+   <span>&nbsp;</span>
+   <Link
+    className='btn btn-danger fw-bold'
+    to='/login'
+    id='login'
+    onClick={logout}
+    style={{ marginLeft: 2 }}
+   >
+    <i className='fas fa-sign-out-alt' /> {''}
+    <span>Logout</span>
+   </Link>
+  </>
+ );
+
+ const guestLinks = (
+  <>
+   <span>&nbsp;</span>
+   <Link
+    className='btn btn-primary fw-bold'
+    to='/profile'
+    id='login'
+    style={{ marginLeft: 2 }}
+   >
+    <i className='fas fa-user' /> {''}
+    <span>Register</span>
+   </Link>
+   <span>&nbsp;</span>
+   <Link
+    className='btn btn-danger fw-bold'
+    to='/login'
+    id='login'
+    onClick={logout}
+    style={{ marginLeft: 2 }}
+   >
+    <i className='fas fa-sign-out-alt' /> {''}
+    <span>Login</span>
+   </Link>
+  </>
+ );
+
  return (
   <div>
    {/* Navigation Bar */}
@@ -12,13 +65,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <div className='container-fluid'>
      <Link to='/' className='navbar-brand'>
       {' '}
-      <img src='#logo' alt className='d-inline-block align-text-top p-1' />
+      <i className='fas fa-graduation-cap'></i>
+      <div className='navbar-brand fw-bold'>YLEARN</div>
      </Link>
      <div className='collapse navbar-collapse ' id='navbar-default'>
       <ul className='nav navbar-nav navbar-nav-lg '>
        <li className='navbar-item dropdown  px-2 '>
         <Link
-         to='/user'
+         to='/'
          className='nav-link'
          id='navbarHome'
          data-bs-toggle
@@ -42,32 +96,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
        {/* Search Form */}
       </ul>
      </div>
-     <div>
-      <span>&nbsp;</span>
-      <Link
-       className='btn btn-primary fw-bold'
-       to='/dashboard'
-       id='login'
-       style={{ marginLeft: 2 }}
-      >
-       <i className='fas fa-user' /> {''}
-       <span>Dashboard</span>
-      </Link>
-     </div>
-     {/* Logout Button */}
-     <div>
-      <span>&nbsp;</span>
-      <Link
-       className='btn btn-danger fw-bold'
-       to='/login'
-       id='login'
-       onClick={logout}
-       style={{ marginLeft: 2 }}
-      >
-       <i className='fas fa-sign-out-alt' /> {''}
-       <span>Logout</span>
-      </Link>
-     </div>
+     <div>{!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}</div>
     </div>
    </nav>
   </div>

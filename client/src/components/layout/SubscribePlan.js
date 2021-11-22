@@ -1,13 +1,7 @@
 import React from 'react';
-import subscribePlan from './subscribeplan.css';
 import { FcApproval } from 'react-icons/fc';
 import { FcCheckmark } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
-
-function clickForMonthlySubscribe() {
- alert('You Clicked Me!');
- // direct to payment page
-}
 
 const SubscribePlan = () => {
  return (

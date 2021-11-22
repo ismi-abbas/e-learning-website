@@ -5,21 +5,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Register from './components/auth/Register';
 import SubscribePlan from './components/layout/SubscribePlan';
-import ClientHeader from './components/dashboard/user/ClientHeader';
-import ClientMain from './components/dashboard/user/ClientMain';
-import ClientDashboard from './components/dashboard/user/ClientDashboard';
+import ClientNavbar from './components/dashboard/user/ClientNavbar';
 import Login from './components/auth/Login';
 import Welcome from './components/layout/Welcome';
 import AdminHeader from './components/dashboard/admin/AdminHeader';
 import AdminMain from './components/layout/AdminMain';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Profile from './components/layout/Profile';
-import UserHeader from '../src/components/page/user/UserHeader';
-import UserMain from '../src/components/page/user/UserMain';
 import UserDashboard from '../src/components/page/user/UserDashboard';
 import UserLearning from '../src/components/page/user/UserLearning';
-import AdminDashboard from '../src/components/layout/AdminDashboard';
-import AdminSidebar from './components/dashboard/admin/AdminSidebar';
+import UploadCourse from './components/page/course/UploadCourse';
+import Landing from './components/layout/Landing';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -30,7 +26,7 @@ import setAuthToken from './utils/setAuthToken';
 if (localStorage.token) {
  setAuthToken(localStorage.token);
 }
-//Parent component
+// Parent component
 const App = () => {
  // useEffect Hook
  useEffect(() => {
@@ -43,18 +39,17 @@ const App = () => {
     <div className='landing'>
      <div>
       <Switch>
+       {/* Home Route */}
        <Route exact path='/'>
-        <ClientHeader />
-        <ClientDashboard />
-        <ClientMain />
+        <Landing />
        </Route>
        <Route path='/register'>
-        <ClientHeader />
+        <ClientNavbar />
         <Welcome />
         <Register />
        </Route>
        <Route path='/login'>
-        <ClientHeader />
+        <ClientNavbar />
         <Welcome />
         <Login />
        </Route>
@@ -63,17 +58,17 @@ const App = () => {
         <AdminMain />
        </Route>
        <Route path='/subscribe'>
-        <ClientHeader />
+        <ClientNavbar />
         <Welcome />
         <SubscribePlan />
        </Route>
        <Route exact path='/learning'>
-        <ClientHeader />
+        <ClientNavbar />
         <UserDashboard />
         <UserLearning />
        </Route>
        <Route exact path='/user'>
-        <ClientHeader />
+        <ClientNavbar />
         <UserDashboard />
         <UserLearning />
        </Route>

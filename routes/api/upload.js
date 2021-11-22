@@ -1,59 +1,64 @@
-const upload = require('../../middleware/upload');
 const express = require('express');
 const router = express.Router();
+const Upload = require('../../models/Upload');
+const multer = require('multer');
+const path = require('path');
+const crypto = require('crypto');
+const { GridFsStorage } = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
-// @route    POST api/upload/file
-// @desc     Get current users profile
+const config = require('config');
+const db = config.get('mongoURI');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const mongoose = require('mongoose');
+
+// Create mongo connection
+const conn = mongoose.createConnection(db);
+
+// Init gfs
+let gfs;
+
+conn.once('open', () => {
+ // Init stream
+ gfs = Grid(conn.db, mongoose.mongo);
+ gfs.collection('uploads');
+});
+
+// Upload Middleware
+router.use(bodyParser.json());
+router.use(methodOverride('_method'));
+
+// Create storage engine
+const storage = new GridFsStorage({
+ url: db,
+ file: (req, file) => {
+  return new Promise((resolve, reject) => {
+   crypto.randomBytes(16, (err, buf) => {
+    if (err) {
+     return reject(err);
+    }
+    const filename = buf.toString('hex') + path.extname(file.originalname);
+    const fileInfo = {
+     filename: filename,
+     bucketName: 'uploads',
+    };
+    resolve(fileInfo);
+   });
+  });
+ },
+});
+const upload = multer({ storage });
+
+// @route    GET api/upload
+// @desc     Get uploads
 // @access   Private
-router.post('/file', upload.single('file'), async (req, res) => {
-  if (req.file === undefined) {
-    return res.send('You must select a file.');
-  }
-  const imgUrl = `http://localhost:5001/api/upload/file/${req.file.filename}`;
-  return res.send(imgUrl);
-});
-// @route    GET api/upload/file
-// @desc     Get video stream
-// @access   Public
-router.get('file/:filename', async (req, res) => {
-  try {
-    const file = await gfs.files.findOne({ filename: req.params.filename });
+router.get('/', async (req, res) => res.send('Connected to API'));
 
-    const readStream = gfs.createReadStream([id, file.filename]);
-    readStream.pipe(res);
-  } catch (error) {
-    res.send('not found');
-  }
+// @route    POST api/upload
+// @desc     Get uploads
+// @access   Private
+router.post('/', upload.single('file'), (req, res) => {
+ res.json({ file: req.file });
 });
-// @route    GET api/upload/files
-// @desc     Get all video files
-// @access   Public
-router.get('/', async (req, res) => {
-  try {
-    const file = await gfs.files.find();
-
-    const readStream = gfs.createReadStream();
-    // res.json(file);
-    readStream.pipe(res);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server Error');
-  }
-});
-
-// @route    DELETE api/upload/file
-// @desc     Get video stream
-// @access   Public
-router.delete('/file/:filename', async (req, res) => {
-  try {
-    await gfs.files.deleteOne({ filename: req.params.filename });
-    res.send('success');
-  } catch (error) {
-    console.log(error);
-    res.send('An error occured.');
-  }
-});
-
-// router.get('/', (req, res) => res.send('Profile route'));
 
 module.exports = router;

@@ -5,17 +5,17 @@ const db = config.get('mongoURI');
 
 // Connecting database function using mongoose
 const connectDB = async () => {
-  try {
-    await mongoose.connect(db, {
-      useNewUrlParser: true,
-    });
+ try {
+  await mongoose.connect(db, {
+   useNewUrlParser: true,
+  });
 
-    console.log('MongoDB Connected');
-  } catch (err) {
-    console.error(err.message);
-    // Exit process with failure
-    process.exit(1);
-  }
+  console.log('MongoDB Connected');
+ } catch (err) {
+  console.error(err.message);
+  // Exit process with failure
+  process.exit(1);
+ }
 };
 //Export this module into others
 module.exports = connectDB;

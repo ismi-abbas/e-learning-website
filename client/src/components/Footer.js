@@ -7,9 +7,9 @@ import { MdEmail } from 'react-icons/md';
 const Footer = () => {
  return (
   <div className='box'>
-   <div className='container'>
+   <div className='container mt-4'>
     <div className='row align-items-centre'>
-     <div className='col-lg-6 col-md-12'>
+     <div className='col-lg-6 col-md-12 p-3'>
       <h2>WE HAVE ACHIEVE</h2>
       <p>5000 Students, 120 Countries, 30,000 Courses Published</p>
      </div>
@@ -62,22 +62,22 @@ const Footer = () => {
      <div className='px-2 flex-grow-1 fs-6 mb-1'>
       <ul className='d-flex mx-3 list-unstyled justify-content-end flex-md-row flex-column'>
        <li className='mx-3'>
-        <a className='text-decoration-none box' href='#'>
+        <a className='text-decoration-none box' href='/'>
          Privacy
         </a>
        </li>
        <li className='mx-3'>
-        <a className='text-decoration-none box ' href='#'>
+        <a className='text-decoration-none box ' href='/'>
          Terms
         </a>
        </li>
        <li className='mx-3'>
-        <a className='text-decoration-none box' href='#'>
+        <a className='text-decoration-none box' href='/'>
          Feedback
         </a>
        </li>
        <li className='mx-3'>
-        <a className='text-decoration-none box' href='#'>
+        <a className='text-decoration-none box' href='/'>
          Support
         </a>
        </li>

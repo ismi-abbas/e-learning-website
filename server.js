@@ -1,29 +1,17 @@
-// require('dotenv').config();
 const connectDB = require('./config/db');
 const express = require('express');
-const mongoose = require('mongoose');
-const Grid = require('gridfs-stream');
 
 // Init Express
 const app = express();
 
-// Init GFS
-let gfs;
-
 // Run connect database function
 connectDB();
+
 // Init middleware
 app.use(express.json({ extended: false }));
 
 // GET request if API is running
 app.get('/', (req, res) => res.send('API is running successfully'));
-
-// Stream Grid-Fs with mongoose
-const conn = mongoose.createConnection();
-conn.once('open', function () {
-  gfs = Grid(conn.db, mongoose.mongo);
-  gfs.collection('photos');
-});
 
 //Define the routes
 app.use('/api/users', require('./routes/api/users'));

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { logout } from '../../../actions/auth';
 
-const ClientHeader = () => {
+const ClientNavbar = () => {
  return (
   <div>
    {/* Navigation Bar */}
@@ -13,7 +13,8 @@ const ClientHeader = () => {
     <div className='container-fluid'>
      <Link to='/' className='navbar-brand'>
       {' '}
-      <img src='#logo' alt className='d-inline-block align-text-top p-1' />
+      <i className='fas fa-graduation-cap'></i>
+      <div className='navbar-brand fw-bold'>YLEARN</div>
      </Link>
      <div className='collapse navbar-collapse ' id='navbar-default'>
       <ul className='nav navbar-nav navbar-nav-lg '>
@@ -57,4 +58,4 @@ const ClientHeader = () => {
  );
 };
 
-export default ClientHeader;
+export default ClientNavbar;
