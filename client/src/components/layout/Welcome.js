@@ -13,8 +13,8 @@ const Welcome = () => {
          Academy
         </h1>
         <p className='text-white-50 mb-4 lead fw-semi-bold fs-5'>
-         A free education platform mainly focused on programming language,
-         suitable for all ages.
+         An education platform mainly focused on programming language, suitable
+         for all ages.
         </p>
        </div>
       </div>

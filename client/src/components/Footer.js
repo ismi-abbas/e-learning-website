@@ -3,15 +3,33 @@ import footer from './footer.css';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { ImOffice } from 'react-icons/im';
 import { MdEmail } from 'react-icons/md';
+import { AiFillFacebook } from 'react-icons/ai';
+import { AiFillInstagram } from 'react-icons/ai';
+import { AiFillYoutube } from 'react-icons/ai';
+import { AiFillTwitterCircle } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { MdPlace } from 'react-icons/md';
+import { BsPersonCircle } from 'react-icons/bs';
+import { AiFillBook } from 'react-icons/ai';
+import { RiTelegramFill } from 'react-icons/ri';
 
 const Footer = () => {
  return (
   <div className='box'>
    <div className='container mt-4'>
-    <div className='row align-items-centre'>
-     <div className='col-lg-6 col-md-12 p-3'>
+    <div>
+     <div className='row'>
       <h2>WE HAVE ACHIEVE</h2>
-      <p>5000 Students, 120 Countries, 30,000 Courses Published</p>
+     </div>
+     <div className='row'>
+      <h5 className='text-center pr-3'>
+       <BsPersonCircle className='icon fa-2x ' />
+       5000 Students
+       <MdPlace className='icon fa-2x' />
+       120 Countries
+       <AiFillBook className='icon fa-2x' />
+       30,000 Courses Published
+      </h5>
      </div>
     </div>
     <hr />
@@ -48,6 +66,16 @@ const Footer = () => {
       </ul>
      </div>
     </div>
+    {/* Social media */}
+    <div className=' mask flex-center d-flex mx-4 justify-content-end flex-md-row fa-2x'>
+     <AiFillFacebook className='mx-2' />
+     <AiFillInstagram className='mx-2' />
+     <AiFillYoutube className='mx-2' />
+     <AiFillTwitterCircle className='mx-2' />
+     <AiFillLinkedin className='mx-2' />
+     <RiTelegramFill className='mx-2' />
+    </div>
+
     <hr />
    </div>
 
