@@ -61,10 +61,7 @@ const Login = ({ login, isAuthenticated }) => {
       </button>
      </form>
      <p className='exist mt-4'>
-      No Account?
-      <span>
-       <Link to='/register'>Register Here</Link>
-      </span>
+      No Account?&nbsp;<Link to='/register'>Register Here</Link>
      </p>
     </div>
    </div>

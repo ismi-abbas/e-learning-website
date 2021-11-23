@@ -90,15 +90,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
        type='button'
        className='btn btn-success'
        value='Register'
-       onClick={onSubmit}
-      >
+       onClick={onSubmit}>
        Sign Up Now
       </button>
       <p className='exist mt-4'>
-       Existing user?
-       <span>
-        <Link to='/login'>Login</Link>
-       </span>
+       Existing user?&nbsp;<Link to='/login'>Login</Link>
       </p>
      </form>
     </div>

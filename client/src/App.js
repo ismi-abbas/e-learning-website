@@ -22,66 +22,66 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import FileUpload from './components/page/course/FileUpload';
 
 if (localStorage.token) {
- setAuthToken(localStorage.token);
+  setAuthToken(localStorage.token);
 }
 // Parent component
 const App = () => {
- // useEffect Hook
- useEffect(() => {
-  store.dispatch(loadUser());
- }, []);
+  // useEffect Hook
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
 
- return (
-  <Provider store={store}>
-   <Router>
-    <div className='landing'>
-     <div>
-      <Switch>
-       {/* Home Route */}
-       <Route exact path='/'>
-        <Landing />
-       </Route>
-       <Route path='/register'>
-        <ClientNavbar />
-        <Welcome />
-        <Register />
-       </Route>
-       <Route path='/login'>
-        <ClientNavbar />
-        <Welcome />
-        <Login />
-       </Route>
-       <Route path='/Admin'>
-        <AdminHeader />
-        <AdminMain />
-       </Route>
-       <Route path='/subscribe'>
-        <ClientNavbar />
-        <Welcome />
-        <SubscribePlan />
-       </Route>
-       <Route exact path='/learning'>
-        <ClientNavbar />
-        <UserDashboard />
-        <UserLearning />
-       </Route>
-       <Route exact path='/user'>
-        <ClientNavbar />
-        <UserDashboard />
-        <UserLearning />
-       </Route>
-       {/* PRIVATE ROUTE - ACCESS ONLY WITH AUTHETICATOR(TOKEN)*/}
-       <PrivateRoute path='/profile' component={Profile} />
-       {/* <PrivateRoute path='/course/id=?' component={Course} /> */}
-      </Switch>
-     </div>
-     <Footer />
-    </div>
-   </Router>
-  </Provider>
- );
+  return (
+    <Provider store={store}>
+      <Router>
+        <div className='landing'>
+          <div>
+            <Switch>
+              <Route exact path='/'>
+                <Landing />
+              </Route>
+              <Route path='/register'>
+                <ClientNavbar />
+                <Welcome />
+                <Register />
+              </Route>
+              <Route path='/login'>
+                <ClientNavbar />
+                <Welcome />
+                <Login />
+              </Route>
+              <Route path='/Admin'>
+                <AdminHeader />
+                <AdminMain />
+              </Route>
+              <Route path='/subscribe'>
+                <ClientNavbar />
+                <Welcome />
+                <SubscribePlan />
+              </Route>
+              <Route exact path='/learning'>
+                <ClientNavbar />
+                <UserDashboard />
+                <UserLearning />
+              </Route>
+              <Route exact path='/user'>
+                <ClientNavbar />
+                <UserDashboard />
+                <UserLearning />
+              </Route>
+              <PrivateRoute path='/profile' component={Profile} />
+              <PrivateRoute path='/upload-course' component={FileUpload} />
+              <PrivateRoute path='/courses' component={Courses} />
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
+  );
 };
 
 export default App;

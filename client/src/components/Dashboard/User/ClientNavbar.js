@@ -20,20 +20,27 @@ const ClientNavbar = () => {
          className='nav-link'
          id='navbarHome'
          data-bs-toggle
-         data-bs-display
-        >
+         data-bs-display>
          Home <span className='carpet' />
         </Link>
        </li>
-       {/* Courses Section */}
+       <li className='navbar-item dropdown  px-2'>
+        <Link
+         to='/courses'
+         className='nav-link'
+         id='navbarPage'
+         data-bs-toggle
+         data-bs-display>
+         Courses
+        </Link>
+       </li>
        <li className='navbar-item dropdown  px-2'>
         <Link
          to='/subscribe'
          className='nav-link'
          id='navbarPage'
          data-bs-toggle
-         data-bs-display
-        >
+         data-bs-display>
          Subscribe Plan
         </Link>
        </li>
