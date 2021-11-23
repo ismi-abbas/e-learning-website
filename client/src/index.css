@@ -111,6 +111,7 @@ input[type='file'] {
  box-shadow: 0 0 1px 1px rgb(29 17 51 / 5%), 0 0 3px 2px rgb(9 32 77 / 19%),
   0 0 2px -3px rgb(29 17 51 / 15%);
  transition: box-shadow 0.25s ease;
+ cursor: pointer;
 }
 
 a.btn.btn-success.fw-bold {
@@ -198,7 +199,7 @@ a.btn:hover {
 }
 
 .content {
- max-width: 900px;
+ max-width: 500px;
  margin: auto;
  overflow: auto;
  min-height: 500px;

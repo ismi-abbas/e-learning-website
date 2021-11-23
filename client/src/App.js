@@ -15,7 +15,7 @@ import Profile from './components/layout/Profile';
 import UserDashboard from '../src/components/page/user/UserDashboard';
 import UserLearning from '../src/components/page/user/UserLearning';
 import Landing from './components/layout/Landing';
-import AdminUpload from './components/Dashboard/Admin/AdminUpload';
+import Courses from './components/layout/Courses';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -72,12 +72,9 @@ const App = () => {
         <UserDashboard />
         <UserLearning />
        </Route>
-       <Route exact path='/user'>
-        <AdminHeader />
-        <AdminUpload />
-       </Route>
        {/* PRIVATE ROUTE - ACCESS ONLY WITH AUTHETICATOR(TOKEN)*/}
        <PrivateRoute path='/profile' component={Profile} />
+       {/* <PrivateRoute path='/course/id=?' component={Course} /> */}
       </Switch>
      </div>
      <Footer />

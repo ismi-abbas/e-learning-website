@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const CourseSchema = new Schema({
  user: {
   type: mongoose.Schema.Types.ObjectId,
-  ref: 'users',
+  ref: 'user',
  },
  title: {
   type: String,
@@ -14,11 +14,12 @@ const CourseSchema = new Schema({
   type: String,
  },
  uploadedBy: {
-  type: String,
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'user',
  },
  courseVideo: {
   type: mongoose.Schema.Types.ObjectId,
-  ref: 'upload',
+  ref: 'uploads',
  },
  date: {
   type: Date,

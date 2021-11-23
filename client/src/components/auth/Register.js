@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../../index.css';
 import { Link, Redirect } from 'react-router-dom';
-// import axios from 'axios';
 
 // Connect with redux
 import { connect } from 'react-redux';
@@ -40,7 +39,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
  }
 
  return (
-  <div className='content justify-content-center mb-5'>
+  <div className='content justify-content-center my-5'>
    <div className='m-3 p-3'>
     <div className='row px-5'>
      {/* SIGN UP FORM */}
