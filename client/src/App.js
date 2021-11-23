@@ -16,8 +16,8 @@ import UserDashboard from '../src/components/page/user/UserDashboard';
 import UserLearning from '../src/components/page/user/UserLearning';
 import UploadCourse from './components/page/course/UploadCourse';
 import Landing from './components/layout/Landing';
-import ClientMain from '../src/components/dashboard/user/ClientMain';
-import ClientDashboard from '../src/components/dashboard/user/ClientDashboard';
+import ClientMain from './components/dashboard/user/ClientMain';
+import ClientDashboard from './components/dashboard/user/ClientDashboard';
 import UserMain from '../src/components//page/user/UserMain';
 import AdminUpload from './components/dashboard/admin/AdminUpload';
 
