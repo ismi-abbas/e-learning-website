@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 // import { logout } from '../../actions/auth';
 
-import ClientDashboard from '../dashboard/user/ClientDashboard';
-import ClientMain from '../dashboard/user/ClientMain';
+import ClientDashboard from '../Dashboard/User/ClientDashboard';
+import ClientMain from '../Dashboard/User/ClientMain';
 import { Redirect } from 'react-router';
-import ClientNavbar from '../dashboard/user/ClientNavbar';
+import ClientNavbar from '../Dashboard/User/ClientNavbar';
 
 const Landing = ({ isAuthenticated }) => {
  if (isAuthenticated) {

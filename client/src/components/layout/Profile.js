@@ -6,7 +6,7 @@ import { getCurrentProfile } from '../../actions/profile';
 // Component
 import Navbar from './Navbar';
 import UserMain from '../page/user/UserMain';
-import AdminProfile from '../dashboard/admin/AdminProfile';
+import AdminProfile from '../Dashboard/Admin/AdminProfile';
 
 const Profile = ({ getCurrentProfile, auth, profile }) => {
  useEffect(() => {
