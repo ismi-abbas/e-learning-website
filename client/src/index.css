@@ -105,15 +105,6 @@ input[type='file'] {
  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.card:hover {
- border: 0;
- background: #fff;
- box-shadow: 0 0 1px 1px rgb(29 17 51 / 5%), 0 0 3px 2px rgb(9 32 77 / 19%),
-  0 0 2px -3px rgb(29 17 51 / 15%);
- transition: box-shadow 0.25s ease;
- cursor: pointer;
-}
-
 a.btn.btn-success.fw-bold {
  background-color: #19cb98;
  border-color: #19cb98;
@@ -199,8 +190,8 @@ a.btn:hover {
 }
 
 .content {
- max-width: 500px;
- margin: auto;
+ max-width: 700px;
+ margin: 30px auto;
  overflow: auto;
  min-height: 500px;
  border: 1px solid steelblue;

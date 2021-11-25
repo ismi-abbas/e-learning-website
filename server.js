@@ -21,6 +21,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/course', require('./routes/api/course'));
 app.use('/api/upload', require('./routes/api/upload')); // Upload route
+app.use('/api/stream', require('./routes/api/stream')); // Stream route
 
 // Store PORT in a variable
 const PORT = process.env.PORT || 5000; //process.env for deployment env

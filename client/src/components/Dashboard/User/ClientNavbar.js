@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ClientNavbar.css';
 
 const ClientNavbar = () => {
  return (
   <div>
    {/* Navigation Bar */}
-   <nav className='navbar navbar-expand-sm navbar-default '>
-    <div className='container-fluid'>
+   <nav className='navbar navbar-expand-sm fixed-top bg-white shadow-sm'>
+    <div className='container-fluid '>
      <Link to='/' className='navbar-brand'>
       {' '}
       <i className='fas fa-graduation-cap'></i>

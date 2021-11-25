@@ -6,6 +6,12 @@ const ProfileSchema = new mongoose.Schema({
   type: mongoose.Schema.Types.ObjectId,
   ref: 'user',
  },
+ course: [
+  {
+   type: mongoose.Schema.Types.ObjectId,
+   ref: 'course',
+  },
+ ],
  // Current employment status
  status: {
   type: String,
@@ -23,29 +29,6 @@ const ProfileSchema = new mongoose.Schema({
  bio: {
   type: String,
  },
- //   All courses uploaded reference by course model
- courses: [
-  {
-   title: {
-    type: String,
-   },
-   desc: {
-    type: String,
-   },
-   url: {
-    type: String,
-    ref: 'courses',
-   },
-   date: {
-    type: Date,
-    default: Date.now,
-   },
-  },
- ],
- // courses: {
- //   type: mongoose.Schema.Types.ObjectId,
- //   ref: 'course',
- // },
  social: {
   twitter: {
    type: String,

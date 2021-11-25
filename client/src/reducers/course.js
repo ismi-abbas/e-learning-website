@@ -1,24 +1,39 @@
-import { GET_COURSE, COURSE_ERROR } from '../actions/types';
+import { GET_COURSES, COURSES_ERROR, GET_COURSE } from '../actions/types'
 
 const initialState = {
- token: localStorage.getItem('token'),
- isAuthenticated: null,
+ courses: [],
+ course: null,
  loading: true,
-};
+ error: {},
+}
 
 export default function (state = initialState, action) {
- const { type, payload } = action;
-
+ const { type, payload } = action
+ // Get all courses
  switch (type) {
+  case GET_COURSES:
+   return {
+    ...state,
+    courses: payload,
+    loading: false,
+   }
+
+  // Get single course
   case GET_COURSE:
    return {
     ...state,
-    isAuthenticated: true,
+    courses: payload,
     loading: false,
-    course: payload,
-   };
+   }
+  //  Return if error
+  case COURSES_ERROR:
+   return {
+    ...state,
+    error: payload,
+    loading: false,
+   }
 
   default:
-   return state;
+   return state
  }
 }

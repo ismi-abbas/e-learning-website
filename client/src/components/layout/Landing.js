@@ -7,6 +7,7 @@ import ClientDashboard from '../Dashboard/User/ClientDashboard';
 import ClientMain from '../Dashboard/User/ClientMain';
 import { Redirect } from 'react-router';
 import ClientNavbar from '../Dashboard/User/ClientNavbar';
+import LandingMain from '../Dashboard/User/LandingMain';
 
 const Landing = ({ isAuthenticated }) => {
  if (isAuthenticated) {
@@ -17,7 +18,8 @@ const Landing = ({ isAuthenticated }) => {
   <div>
    <ClientNavbar />
    <ClientDashboard />
-   <ClientMain />
+   <LandingMain />
+   {/* <ClientMain /> */}
   </div>
  );
 };

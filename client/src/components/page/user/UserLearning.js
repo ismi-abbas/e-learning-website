@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../../index.css';
 
 const UserLearning = () => {
  return (
@@ -7,7 +9,7 @@ const UserLearning = () => {
     <div className='container'>
      <div className='row mb-4'>
       <div className='col mt-5 mb-3'>
-       <h3 className='mb-0 fw-semi-bold'>My Courses</h3>
+       <h3 className='mb-0 fw-semi-bold'>Courses</h3>
       </div>
      </div>
      {/* Card Section */}
@@ -59,9 +61,13 @@ const UserLearning = () => {
           <div className='card-footer'>
            <div className='row align-items-center g-0'>
             <div>
-             <a className='btn btn-primary fw-bold' href='#' id='continue'>
+             <Link
+              to='/coursepage'
+              className='btn btn-primary fw-bold'
+              href='#'
+              id='continue'>
               Continue learning
-             </a>
+             </Link>
             </div>
             <div className='col-auto ms-auto'>
              <a href='#'>

@@ -10,7 +10,7 @@ const SubscribePlan = () => {
    <div className='my-4 d-flex justify-content-center'>
     <div className='row'>
      <div className='content col-lg-5 col-md-8 plan align-items-centre'>
-      <h4 className=' p-3 mb-2 bg-dark text-white'>MONTHLY PLAN</h4>
+      <h4 className=' p-3 mb-3 rounded bg-dark text-white'>MONTHLY PLAN</h4>
 
       <ul className='list-unstyled'>
        <li>
@@ -60,7 +60,7 @@ const SubscribePlan = () => {
      </div>
 
      <div className='content col-lg-5 col-md-8 plan align-items-centre'>
-      <h4 className='p-3 mb-2 bg-dark text-white'>ANNUAL PLAN</h4>
+      <h4 className='p-3 mb-3 bg-dark text-white rounded'>ANNUAL PLAN</h4>
       <ul className='list-unstyled'>
        <li>
         <FcApproval className='icon fa-2x' />

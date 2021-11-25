@@ -1,5 +1,5 @@
 import React from 'react';
-import footer from './footer.css';
+import './footer.css';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { ImOffice } from 'react-icons/im';
 import { MdEmail } from 'react-icons/md';
@@ -16,19 +16,19 @@ import { RiTelegramFill } from 'react-icons/ri';
 const Footer = () => {
  return (
   <div className='box'>
-   <div className='container mt-4'>
+   <div className='container mt-2 p-3'>
     <div>
      <div className='row'>
-      <h2>WE HAVE ACHIEVE</h2>
+      <h4>WE HAVE ACHIEVE</h4>
      </div>
      <div className='row'>
       <h5 className='text-center pr-3'>
        <BsPersonCircle className='icon fa-2x ' />
-       5000 Students
+       &nbsp; 5000 Students
        <MdPlace className='icon fa-2x' />
-       120 Countries
+       &nbsp; 120 Countries
        <AiFillBook className='icon fa-2x' />
-       30,000 Courses Published
+       &nbsp; 30,000 Courses Published
       </h5>
      </div>
     </div>
@@ -68,18 +68,17 @@ const Footer = () => {
     </div>
     {/* Social media */}
     <div className=' mask flex-center d-flex mx-4 justify-content-end flex-md-row fa-2x'>
-     <AiFillFacebook className='mx-2' />
-     <AiFillInstagram className='mx-2' />
-     <AiFillYoutube className='mx-2' />
-     <AiFillTwitterCircle className='mx-2' />
-     <AiFillLinkedin className='mx-2' />
-     <RiTelegramFill className='mx-2' />
+     <AiFillFacebook className='mx-2 social-facebook' />
+     <AiFillInstagram className='mx-2 social-insta' />
+     <AiFillYoutube className='mx-2 social-yt' />
+     <AiFillTwitterCircle className='mx-2 social-twitter' />
+     <AiFillLinkedin className='mx-2 social-linked' />
+     <RiTelegramFill className='mx-2 social-tele' />
     </div>
 
     <hr />
    </div>
-
-   <footer className='d-flex flex-wrap mt-5 pt-3 '>
+   <footer className='d-flex flex-wrap mt-5 pt-3'>
     <div className='container d-flex p-3 mb-2 box '>
      <div className='px-2 fs-6 mx-3 mb-1 flex-md-column'>
       {' '}

@@ -2,7 +2,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Footer from './components/Footer';
+import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import SubscribePlan from './components/layout/SubscribePlan';
 import ClientNavbar from './components/Dashboard/User/ClientNavbar';
@@ -15,7 +15,10 @@ import Profile from './components/layout/Profile';
 import UserDashboard from '../src/components/page/user/UserDashboard';
 import UserLearning from '../src/components/page/user/UserLearning';
 import Landing from './components/layout/Landing';
-import Courses from './components/layout/Courses';
+import About from './components/layout/About';
+import Courses from './components/courses/Courses';
+import Course from './components/course/Course';
+import Navbar from './components/layout/Navbar';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -24,6 +27,7 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import FileUpload from './components/page/course/FileUpload';
 import ViewCoursePage from './components/layout/ViewCoursePage';
+import VideoStream from './components/layout/VideoStream';
 
 if (localStorage.token) {
  setAuthToken(localStorage.token);
@@ -32,6 +36,7 @@ if (localStorage.token) {
 const App = () => {
  // useEffect Hook
  useEffect(() => {
+  window.scrollTo(0, 0);
   store.dispatch(loadUser());
  }, []);
 
@@ -43,6 +48,14 @@ const App = () => {
       <Switch>
        <Route exact path='/'>
         <Landing />
+       </Route>
+       <PrivateRoute path='/profile' component={Profile} />
+       <PrivateRoute path='/upload-course' component={FileUpload} />
+       <PrivateRoute path='/course/:id' component={Course} />
+       <PrivateRoute path='/stream' component={VideoStream} />
+       <Route exact path='/about'>
+        <ClientNavbar />
+        <About />
        </Route>
        <Route path='/register'>
         <ClientNavbar />
@@ -64,9 +77,9 @@ const App = () => {
         <SubscribePlan />
        </Route>
        <Route exact path='/learning'>
-        <ClientNavbar />
+        <Navbar />
         <UserDashboard />
-        <UserLearning />
+        <Courses />
        </Route>
        <Route exact path='/user'>
         <ClientNavbar />
@@ -74,13 +87,10 @@ const App = () => {
         <UserLearning />
        </Route>
        {/* Added a route to View Course page */}
-       <Route exact path='/coursepage'>
+       <Route exact path='/courses'>
         <ClientNavbar />
-        <ViewCoursePage />
+        <AdminMain />
        </Route>
-       <PrivateRoute path='/profile' component={Profile} />
-       <PrivateRoute path='/upload-course' component={FileUpload} />
-       <PrivateRoute path='/courses' component={Courses} />
       </Switch>
      </div>
      <Footer />

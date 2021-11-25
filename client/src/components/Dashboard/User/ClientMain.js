@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const Main = () => {
+// Redux
+import { connect } from 'react-redux';
+import { getCourses } from '../../../actions/course';
+
+const ClientMain = ({ getCourses, course: { courses, loading } }) => {
+ // Dynamic course detail
+ useEffect(() => {
+  window.scrollTo(0, 0);
+  getCourses();
+ }, [getCourses]);
+
  return (
   <div>
    <section className='pt-lg-12 pb-lg-3 pt-8 pb-6'>
@@ -557,4 +568,13 @@ const Main = () => {
  );
 };
 
-export default Main;
+ClientMain.propTypes = {
+ getCourses: PropTypes.func.isRequired,
+ course: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+ course: state.course,
+});
+
+export default connect(mapStateToProps, { getCourses })(ClientMain);

@@ -13,10 +13,11 @@ const Course = require('../../models/Course');
 // @access   Private
 router.get('/me', auth, async (req, res) => {
  try {
-  const profile = await Profile.findOne({ user: req.user.id }).populate(
-   'user',
-   ['name', 'avatar']
-  );
+  const profile = await Profile.findOne({
+   user: req.user.id,
+  })
+   .populate('user', ['name', 'avatar'])
+   .populate('course', ['title', 'desc']);
 
   // Check if the profile exist
   if (!profile) {
@@ -49,26 +50,14 @@ router.post(
    return res.status(400).json({ errors: errors.array() });
   }
 
-  const {
-   status,
-   students,
-   review,
-   bio,
-   courses,
-   twitter,
-   facebook,
-   instagram,
-   linkedin,
-  } = req.body;
+  const { status, bio, twitter, facebook, instagram, linkedin } = req.body;
 
   // Build profile object
   const profileFields = {};
   profileFields.user = req.user.id;
-  if (students) profileFields.students = students;
-  if (review) profileFields.review = review;
+  //   profileFields.course = req.user.course;
   if (bio) profileFields.bio = bio;
   if (status) profileFields.status = status;
-  if (courses) profileFields.courses = courses;
 
   // Build social object
   profileFields.social = {};

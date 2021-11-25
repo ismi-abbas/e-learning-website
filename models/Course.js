@@ -1,30 +1,16 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 // Array of courses uploaded
 const CourseSchema = new Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user',
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  desc: {
-    type: String,
-  },
-  uploadedBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user',
-  },
-  video: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'uploads',
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
-});
+ title: { type: String, required: true },
+ desc: { type: String },
+ url: { type: String, required: true },
+ imgSrc: { type: String, required: true },
+ instructor: { type: String, required: true },
+ duration: { type: String, required: true },
+ rating: { type: Number, required: true },
+ level: { type: String, required: true },
+ date: { type: Date, default: Date.now },
+})
 // Export module then set the model
-module.exports = Course = mongoose.model('course', CourseSchema);
+module.exports = Course = mongoose.model('course', CourseSchema)
