@@ -1,17 +1,16 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
+import React from 'react'
+import { connect } from 'react-redux'
+import { PropTypes } from 'prop-types'
 // import { logout } from '../../actions/auth';
 
-import ClientDashboard from '../Dashboard/User/ClientDashboard';
-import ClientMain from '../Dashboard/User/ClientMain';
-import { Redirect } from 'react-router';
-import ClientNavbar from '../Dashboard/User/ClientNavbar';
-import LandingMain from '../Dashboard/User/LandingMain';
+import ClientDashboard from '../Dashboard/User/ClientDashboard'
+import { Redirect } from 'react-router'
+import ClientNavbar from '../Dashboard/User/ClientNavbar'
+import LandingMain from '../Dashboard/User/LandingMain'
 
 const Landing = ({ isAuthenticated }) => {
  if (isAuthenticated) {
-  return <Redirect to='/profile' />;
+  return <Redirect to='/profile' />
  }
 
  return (
@@ -21,15 +20,15 @@ const Landing = ({ isAuthenticated }) => {
    <LandingMain />
    {/* <ClientMain /> */}
   </div>
- );
-};
+ )
+}
 
 Landing.propTypes = {
  isAuthenticated: PropTypes.bool,
-};
+}
 
 const mapStateToProps = (state) => ({
  isAuthenticated: state.auth.isAuthenticated,
-});
+})
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps)(Landing)

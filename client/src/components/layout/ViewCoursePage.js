@@ -1,12 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import Courses from '../courses/Courses';
-
-// Redux
-import { connect } from 'react-redux';
+import Courses from '../courses/Courses'
 
 const ViewCoursePage = ({ getVideo }) => {
- return <Courses />;
-};
+ return <Courses />
+}
 
-export default ViewCoursePage;
+export default ViewCoursePage

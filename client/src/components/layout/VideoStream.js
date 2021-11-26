@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../../index.css';
+import React from 'react'
+import '../../index.css'
 
 const VideoStream = (props) => {
  return (
@@ -20,9 +19,9 @@ const VideoStream = (props) => {
     </div>
    </div>
   </div>
- );
-};
+ )
+}
 
-VideoStream.propTypes = {};
+VideoStream.propTypes = {}
 
-export default VideoStream;
+export default VideoStream

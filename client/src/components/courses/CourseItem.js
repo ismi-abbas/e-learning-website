@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './CourseItem.css'
 
@@ -21,7 +21,7 @@ const CourseItem = ({
 }) => {
  return (
   <section className='card mb-5'>
-   <img className='img rounded-3' src={imgSrc} alt='no image' wi />
+   <img className='rounded-top' src={imgSrc} alt='no image' wi />
    <div className='card-body'>
     <div className='card-title'>{title}</div>
     <div className='fs-6 fw-semi-bold text-muted'>

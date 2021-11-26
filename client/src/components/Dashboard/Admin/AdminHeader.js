@@ -1,6 +1,5 @@
-import React from 'react';
-import AdminMain from '../../layout/AdminMain';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const AdminHeader = () => {
  return (
@@ -12,7 +11,7 @@ const AdminHeader = () => {
       {' '}
       <img
        src='https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg'
-       alt
+       alt='logo'
        className='d-inline-block align-text-top p-1'
       />
      </Link>
@@ -25,8 +24,7 @@ const AdminHeader = () => {
          className='nav-link'
          id='navbarPage'
          data-bs-toggle
-         data-bs-display
-        >
+         data-bs-display>
          Home
         </Link>
        </li>
@@ -37,8 +35,7 @@ const AdminHeader = () => {
          className='nav-link '
          id='navbarAccount'
          data-bs-toggle
-         data-bs-display
-        >
+         data-bs-display>
          <i className='bi bi-three-dots' />
         </a>
        </li>
@@ -64,8 +61,7 @@ const AdminHeader = () => {
         className='rounded-circle'
         href='#'
         data-bs-toggle='dropdown'
-        data-bs-display='static'
-       >
+        data-bs-display='static'>
         <div className='avatar avatar-md avatar-indicators avatar-online'>
          <span>
           <img
@@ -82,8 +78,7 @@ const AdminHeader = () => {
          <div className='d-flex'>
           <div
            className='avatar avatar-md avatar-indicators avatar-online align-self-center iconavatar-items-list'
-           id='avatar-icon'
-          >
+           id='avatar-icon'>
            <img
             className='rounded-circle'
             alt='avatar'
@@ -145,15 +140,14 @@ const AdminHeader = () => {
        className='navbar-toggler ms-auto'
        aria-controls='navbar-default'
        aria-expanded='false'
-       aria-label='toggle navigation'
-      >
+       aria-label='toggle navigation'>
        <span className='bi bi-list'> </span>
       </button>
      </ul>
     </div>
    </nav>
   </div>
- );
-};
+ )
+}
 
-export default AdminHeader;
+export default AdminHeader

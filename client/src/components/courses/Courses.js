@@ -2,8 +2,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Spinner from '../layout/Spinner'
-import { BiTimeFive } from 'react-icons/bi'
-import { GrCertificate } from 'react-icons/gr'
 import CourseItem from './CourseItem.js'
 import '../../index.css'
 

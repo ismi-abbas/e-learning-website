@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { setAlert } from './alert'
 import { GET_COURSES, COURSES_ERROR, GET_COURSE } from './types'
 
 // Get courses

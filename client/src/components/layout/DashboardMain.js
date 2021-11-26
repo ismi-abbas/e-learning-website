@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
 
 const DashboardMain = () => {
  return (
@@ -18,14 +17,14 @@ const DashboardMain = () => {
         </div>
        </div>
        <div className=' col-lg-6 col-md-12'>
-        <img className='img-fluid align-items-center' src='' alt />
+        <img className='img-fluid align-items-center' src='' alt='' />
        </div>
       </div>
      </div>
     </section>
    </div>
   </div>
- );
-};
+ )
+}
 
-export default DashboardMain;
+export default DashboardMain

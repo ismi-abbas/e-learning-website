@@ -1,21 +1,17 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Spinner from '../layout/Spinner';
-import { BiTimeFive } from 'react-icons/bi';
-import { GrCertificate } from 'react-icons/gr';
-import CourseItem from '../../components/courses/CourseItem';
-import '../../index.css';
-import { Row, Col } from 'react-bootstrap';
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
+import CourseItem from '../../components/courses/CourseItem'
+import '../../index.css'
 
 // Redux
-import { connect } from 'react-redux';
-import { getCourses } from '../../actions/course';
+import { connect } from 'react-redux'
+import { getCourses } from '../../actions/course'
 
 const AdminMain = ({ getCourses, course: { courses, loading } }) => {
  useEffect(() => {
-  window.scrollTo(0, 0);
-  getCourses();
- }, [getCourses]);
+  window.scrollTo(0, 0)
+  getCourses()
+ }, [getCourses])
  return (
   <>
    <section>
@@ -35,19 +31,19 @@ const AdminMain = ({ getCourses, course: { courses, loading } }) => {
     </div>
    </section>
   </>
- );
-};
+ )
+}
 
 AdminMain.propTypes = {
  getCourses: PropTypes.func.isRequired,
  course: PropTypes.object.isRequired,
-};
+}
 
 const mapStateToProps = (state) => ({
  course: state.course,
-});
+})
 
-export default connect(mapStateToProps, { getCourses })(AdminMain);
+export default connect(mapStateToProps, { getCourses })(AdminMain)
 
 //   <div>
 //    <section className='pt-lg-12 pb-lg-3 pt-8 pb-6'>
