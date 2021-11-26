@@ -9,21 +9,28 @@ import { BiTimeFive } from 'react-icons/bi'
 import { GrCertificate } from 'react-icons/gr'
 import Navbar from '../layout/Navbar'
 import CourseItem from '../courses/CourseItem'
+import CourseView from './CourseView'
 
-const Course = ({ getCourse, auth, course: { course, loading }, match }) => {
+const Course = ({ getCourse, course: { course, loading }, match }) => {
  useEffect(() => {
-  window.scrollTo(0, 0)
-  getCourse(match.params._id)
- }, [])
+  getCourse(match.params.id)
+ }, [getCourse])
+
  return loading || course === null ? (
-  <Spinner />
+  <div class='spinner-border' role='status'>
+   <span class='visually-hidden'>Loading...</span>
+  </div>
  ) : (
-  <>
-   <Link to='/course' className='btn'>
-    Back To Course
-   </Link>
-   <CourseItem course={course} />
-  </>
+  <div>
+   <div className='container'>
+    <Link to='/courses' className='btn btn-success  shadow rounded-2'>
+     <i className='fas fa-arrow-circle-left' /> {''}
+     Back to courses
+    </Link>
+    <Navbar />
+    <CourseView course={course} />
+   </div>
+  </div>
  )
 }
 

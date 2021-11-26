@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const ProfileSchema = new mongoose.Schema({
  // Profile info referenced by user model
@@ -47,7 +47,7 @@ const ProfileSchema = new mongoose.Schema({
   type: Date,
   default: Date.now,
  },
-});
+})
 
 // Export module then set the model
-module.exports = Profile = mongoose.model('profile', ProfileSchema);
+module.exports = Profile = mongoose.model('profile', ProfileSchema)

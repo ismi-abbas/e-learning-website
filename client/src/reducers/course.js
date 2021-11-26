@@ -22,7 +22,7 @@ export default function (state = initialState, action) {
   case GET_COURSE:
    return {
     ...state,
-    courses: payload,
+    course: payload,
     loading: false,
    }
   //  Return if error

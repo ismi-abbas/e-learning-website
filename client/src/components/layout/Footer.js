@@ -1,21 +1,21 @@
-import React from 'react';
-import './footer.css';
-import { BsFillTelephoneFill } from 'react-icons/bs';
-import { ImOffice } from 'react-icons/im';
-import { MdEmail } from 'react-icons/md';
-import { AiFillFacebook } from 'react-icons/ai';
-import { AiFillInstagram } from 'react-icons/ai';
-import { AiFillYoutube } from 'react-icons/ai';
-import { AiFillTwitterCircle } from 'react-icons/ai';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { MdPlace } from 'react-icons/md';
-import { BsPersonCircle } from 'react-icons/bs';
-import { AiFillBook } from 'react-icons/ai';
-import { RiTelegramFill } from 'react-icons/ri';
+import React from 'react'
+import './footer.css'
+import { BsFillTelephoneFill } from 'react-icons/bs'
+import { ImOffice } from 'react-icons/im'
+import { MdEmail } from 'react-icons/md'
+import { AiFillFacebook } from 'react-icons/ai'
+import { AiFillInstagram } from 'react-icons/ai'
+import { AiFillYoutube } from 'react-icons/ai'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { AiFillLinkedin } from 'react-icons/ai'
+import { MdPlace } from 'react-icons/md'
+import { BsPersonCircle } from 'react-icons/bs'
+import { AiFillBook } from 'react-icons/ai'
+import { RiTelegramFill } from 'react-icons/ri'
 
 const Footer = () => {
  return (
-  <div className='box'>
+  <div className='box shadow'>
    <div className='container mt-2 p-3'>
     <div>
      <div className='row'>
@@ -113,7 +113,7 @@ const Footer = () => {
     </div>
    </footer>
   </div>
- );
-};
+ )
+}
 
-export default Footer;
+export default Footer
